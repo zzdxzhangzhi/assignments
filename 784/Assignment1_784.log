@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.12.2)  3 AUG 2017 16:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.12.2)  4 AUG 2017 16:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -213,21 +213,38 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 67.
 (c:/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 76--78
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
 
- []
-
-LaTeX Font Info:    Try loading font information for U+euf on input line 114.
-(c:/texlive/2016/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
 Overfull \vbox (47.75095pt too high) has occurred while \output is active []
 
 
 [1
 
 {c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (9.83229pt too wide) in paragraph at lines 118--122
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ì in font cmr10!
+
+Overfull \hbox (11.70654pt too wide) in paragraph at lines 90--98
+[]\OT1/cmr/m/n/10 The third tech-nique is called Par-tial Least Squares Dis-cri
+m-i-nant Anal-y-sis (PLSDA).
+ []
+
+
+Overfull \vbox (47.75095pt too high) has occurred while \output is active []
+
+
+[2]
+LaTeX Font Info:    Try loading font information for U+euf on input line 134.
+ (c:/texlive/2016/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+Overfull \hbox (9.83229pt too wide) in paragraph at lines 138--142
 \OT1/cmr/m/n/8 foot-note-size\OT1/cmr/m/n/10 , \OT1/cmr/m/n/9 small\OT1/cmr/m/n
 /10 , nor-mal-size, \OT1/cmr/m/n/12 large\OT1/cmr/m/n/10 , \OT1/cmr/m/n/14.4 La
 rge\OT1/cmr/m/n/10 , \OT1/cmr/m/n/17.28 LARGE\OT1/cmr/m/n/10 , \OT1/cmr/m/n/20.
@@ -238,35 +255,35 @@ rge\OT1/cmr/m/n/10 , \OT1/cmr/m/n/17.28 LARGE\OT1/cmr/m/n/10 , \OT1/cmr/m/n/20.
 Overfull \vbox (47.75095pt too high) has occurred while \output is active []
 
 
-[2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 223.
-
- (c:/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 223.
-
-Overfull \vbox (47.75095pt too high) has occurred while \output is active []
-
-
 [3]
 Overfull \vbox (47.75095pt too high) has occurred while \output is active []
 
 
 [4]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 243.
+
+ (c:/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 243.
+
 Overfull \vbox (47.75095pt too high) has occurred while \output is active []
 
 
-[5] (./Assignment1_784.aux) ) 
+[5]
+Overfull \vbox (47.75095pt too high) has occurred while \output is active []
+
+
+[6] (./Assignment1_784.aux) ) 
 Here is how much of TeX's memory you used:
  2511 strings out of 493013
  32709 string characters out of 6136993
- 95468 words of memory out of 5000000
+ 96468 words of memory out of 5000000
  6013 multiletter control sequences out of 15000+600000
  14581 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,7n,25p,603b,269s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,7n,25p,626b,269s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2016/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmbx10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmbx12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.p
@@ -287,10 +304,10 @@ msfonts/cm/cmsy5.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
 b><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/tex
 live/2016/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2
 016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Assignment1_784.pdf (5 pages, 246509 bytes).
+Output written on Assignment1_784.pdf (6 pages, 251785 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
+ 111 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
