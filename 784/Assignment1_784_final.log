@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.4.13)  5 AUG 2017 09:40
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.4.13)  5 AUG 2017 09:41
 entering extended mode
-**Assignment1_784.tex
-("E:\My Documents\UoA Study\784\assignments\784\Assignment1_784.tex"
+**Assignment1_784_final.tex
+("E:\My Documents\UoA Study\784\assignments\784\Assignment1_784_final.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
 (C:\my\CTEX\MiKTeX\tex\latex\base\article.cls
@@ -170,7 +170,7 @@ G,.JBIG2,.JB2,.eps]
 ))
 \c@theorem=\count100
 
-("E:\My Documents\UoA Study\784\assignments\784\Assignment1_784.aux")
+No file Assignment1_784_final.aux.
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
 LaTeX Font Info:    ... okay on input line 62.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
@@ -183,7 +183,6 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
 LaTeX Font Info:    ... okay on input line 62.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
 LaTeX Font Info:    ... okay on input line 62.
-
 (C:\my\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count101
@@ -426,73 +425,25 @@ Overfull \vbox (47.75095pt too high) has occurred while \output is active []
 Overfull \vbox (47.75095pt too high) has occurred while \output is active []
 
 
-[10]
-LaTeX Font Info:    Try loading font information for U+euf on input line 486.
- (C:\my\CTEX\MiKTeX\tex\latex\amsfonts\ueuf.fd
-File: ueuf.fd 2009/06/22 v3.00 Euler Fraktur
-)
-Overfull \hbox (9.83229pt too wide) in paragraph at lines 490--494
-\OT1/cmr/m/n/8 foot-note-size\OT1/cmr/m/n/10 , \OT1/cmr/m/n/9 s-mal-l\OT1/cmr/m
-/n/10 , nor-mal-size, \OT1/cmr/m/n/12 large\OT1/cmr/m/n/10 , \OT1/cmr/m/n/14.4 
-Large\OT1/cmr/m/n/10 , \OT1/cmr/m/n/17.28 LARGE\OT1/cmr/m/n/10 , \OT1/cmr/m/n/2
-0.74 huge \OT1/cmr/m/n/10 and \OT1/cmr/m/n/24.88 Huge\OT1/cmr/m/n/10 . 
- []
-
-
-Overfull \vbox (47.75095pt too high) has occurred while \output is active []
-
-
-[11]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 595.
-
- (C:\my\CTEX\MiKTeX\tex\latex\base\omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 595.
-
-Overfull \vbox (47.75095pt too high) has occurred while \output is active []
-
-
-[12]
-Overfull \vbox (47.75095pt too high) has occurred while \output is active []
-
-
-[13]
-Overfull \vbox (47.75095pt too high) has occurred while \output is active []
-
-
-[14] ("E:\My Documents\UoA Study\784\assignments\784\Assignment1_784.aux") ) 
+[10] ("E:\My Documents\UoA Study\784\assignments\784\Assignment1_784_final.aux"
+) ) 
 Here is how much of TeX's memory you used:
- 2476 strings out of 495354
- 31721 string characters out of 3183691
- 92540 words of memory out of 3000000
- 5599 multiletter control sequences out of 15000+200000
- 14940 words of font info for 57 fonts, out of 3000000 for 9000
+ 2422 strings out of 495354
+ 30894 string characters out of 3183691
+ 92510 words of memory out of 3000000
+ 5561 multiletter control sequences out of 15000+200000
+ 12068 words of font info for 47 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,7n,23p,625b,269s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:
-/my/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/my/CTEX/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmbx12.pfb><C:/my/CTEX/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmbxti10.pfb><C:/my/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc
-10.pfb><C:/my/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/my/CTEX
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/my/CTEX/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmmi7.pfb><C:/my/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmr10.pfb><C:/my/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/my/C
-TEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/my/CTEX/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmr5.pfb><C:/my/CTEX/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmr7.pfb><C:/my/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/my/C
-TEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/my/CTEX/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmsl10.pfb><C:/my/CTEX/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmss10.pfb><C:/my/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
-/my/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/my/CTEX/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmsy7.pfb><C:/my/CTEX/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmti10.pfb><C:/my/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pf
-b><C:/my/CTEX/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/my/CTEX/M
-iKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Assignment1_784.pdf (14 pages, 303344 bytes).
+ 42i,7n,23p,631b,246s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/my/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/my/CTEX/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/my/CTEX/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmr10.pfb><C:/my/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmr12.pfb><C:/my/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/my/CT
+EX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/my/CTEX/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Assignment1_784_final.pdf (10 pages, 120806 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
+ 68 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
