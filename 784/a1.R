@@ -10,6 +10,8 @@ input.df$waterfr = factor(input.df$waterfr)
 input.df$view = factor(input.df$view)
 str(input.df)
 
+origInput.df = data.frame(input.df)
+
 library(caret)
 trans = BoxCoxTrans(input.df$price)
 trans
@@ -19,41 +21,48 @@ par(mfrow = c(1, 2))
 hist(input.df$price, main = "Untransformed", nclass = 30)
 hist(transPrice, main = "Transformed", nclass = 30)
 
-#trans = BoxCoxTrans(input.df$sqftlv)
-#transSqftlv = predict(trans, input.df$sqftlv)
-#trans = BoxCoxTrans(input.df$sqftlot)
-#transSqftlot = predict(trans, input.df$sqftlot)
-#trans = BoxCoxTrans(input.df$sqftlv15)
-#transSqftlv15 = predict(trans, input.df$sqftlv15)
-#trans = BoxCoxTrans(input.df$sqftlot15)
-#transSqftlot15 = predict(trans, input.df$sqftlot15)
+input.df$price = transPrice
+
+trans = BoxCoxTrans(input.df$sqftlv)
+transSqftlv = predict(trans, input.df$sqftlv)
+input.df$sqftlv = transSqftlv
+trans = BoxCoxTrans(input.df$sqftlot)
+transSqftlot = predict(trans, input.df$sqftlot)
+input.df$sqftlot = transSqftlot
+trans = BoxCoxTrans(input.df$sqftlv15)
+transSqftlv15 = predict(trans, input.df$sqftlv15)
+input.df$sqftlv15 = transSqftlv15
+trans = BoxCoxTrans(input.df$sqftlot15)
+transSqftlot15 = predict(trans, input.df$sqftlot15)
+input.df$sqftlot15 = transSqftlot15
 
 used = sample(21613, 10000)
 kingCounty.df = input.df[used,]
 rownames(kingCounty.df) = 1:10000
 
-#kingCounty = lm(log(transPrice[1:10000])~ bedrooms + bathrooms
-			+ transSqftlv[1:10000] + transSqftlot[1:10000]
+kingCounty = lm(log(price)~ bedrooms + bathrooms
+			+ sqftlv + sqftlot
 			+ floors + waterfr + view + cond + grade 
 			+ sqfta + sqftb + yrb + yrr + lat + long
-			+ transSqftlv15[1:10000] + transSqftlot15[1:10000], 
+			+ sqftlv15 + sqftlot15, 
 			data = kingCounty.df)
-#kingCounty = lm(log(transPrice[1:10000])~ . - id - date - zip,
+#kingCounty = lm(log(price)~ . - id - date - zip,
 			data = kingCounty.df)
 
-kingCounty = lm(log(transPrice[1:10000])~ bedrooms + bathrooms
-			+ sqftlv + sqftlot
-			+ floors + cond + grade 
-			+ sqfta + yrb + lat + long
-			+ sqftlv15 + sqftlot15,
-			data = kingCounty.df)
+#kingCounty = lm(log(transPrice[1:10000])~ bedrooms + bathrooms
+#			+ sqftlv + sqftlot + floors 
+#			+ waterfr + view + cond + grade 
+#			+ sqfta + yrb + lat + long
+#			+ sqftlv15 + sqftlot15,
+#			data = kingCounty.df)
 
 mean(residuals(kingCounty)^2)
 
 newKingCounty.df = input.df[-used,]
 rownames(newKingCounty.df) = 1:11613
 predictions = predict(kingCounty, newdata = newKingCounty.df)
-actuals = log(transPrice[10001:21613])
+#actuals = log(transPrice[10001:21613])
+actuals = log(newKingCounty.df$price)
 mean((predictions - actuals)^2)
 
 library(R330)
@@ -103,19 +112,29 @@ theta.fit = function(x, y){lsfit(x, y)}
 theta.predict = function(fit, x){cbind(1, x) %*% fit$coef}
 sq.err = function(y, yhat) {(y - yhat)^2}
 
-y = log(transPrice[1:10000])
-x = kingCounty.df[,-1]
+#y = log(transPrice[1:10000])
+y = log(kingCounty.df[,3])
+x = data.matrix(kingCounty.df[,-c(1:3, 17)])
 cv10err = crossval(x, y, theta.fit, theta.predict, ngroup = 10)
+cv10 = mean((y - cv10err$cv.fit)^2)
+cv10
 
-boot = bootpred(x,y,nboot=200, theta.fit, theta.predict, 
-          err.meas=sq.err)
+boot = bootpred(x, y, nboot = 200, 
+		theta.fit, theta.predict, 
+		err.meas = sq.err)
+bootopt = boot[[1]] + boot[[2]]
+bootopt
+boot632 = boot[[3]]
+boot632
 
 library(caret)
 
+#kingCounty.df$price = transPrice[1:10000]
+
 CV10 = train(log(price)~ bedrooms + bathrooms
-			+ sqftlv + sqftlot
-			+ floors + cond + grade 
-			+ sqfta + yrb + lat + long
+			+ sqftlv + sqftlot + floors 
+			+ waterfr + view + cond + grade 
+			+ sqfta + sqftb + yrb + yrr + lat + long
 			+ sqftlv15 + sqftlot15,
 		data = kingCounty.df,
 		method = "lm",
@@ -124,9 +143,9 @@ CV10 = train(log(price)~ bedrooms + bathrooms
 CV10
 
 boot = train(log(price)~ bedrooms + bathrooms
-			+ sqftlv + sqftlot
-			+ floors + cond + grade 
-			+ sqfta + yrb + lat + long
+			+ sqftlv + sqftlot + floors 
+			+ waterfr + view + cond + grade 
+			+ sqfta + sqftb + yrb + yrr + lat + long
 			+ sqftlv15 + sqftlot15,
 		data = kingCounty.df,
 		method = "lm",
@@ -134,7 +153,7 @@ boot = train(log(price)~ bedrooms + bathrooms
 						repeats = 200))
 boot
 
-null.model = lm(log(transPrice[1:10000])~1, data = kingCounty.df)
+null.model = lm(log(price)~1, data = kingCounty.df)
 selected = step(null.model, scope = formula(kingCounty),
 		direction = "forward", trace = 0)
 selected
@@ -148,6 +167,9 @@ selected = step(kingCounty, scope = formula(kingCounty),
 selected
 
 allpossregs(kingCounty)
+
+kingCounty.df = origInput.df[used,]
+rownames(kingCounty.df) = 1:10000
 
 null.model = lm(log(price)~1, data = kingCounty.df)
 selected = step(null.model, scope = formula(kingCounty),

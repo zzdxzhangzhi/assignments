@@ -1,13 +1,15 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.4.13)  5 AUG 2017 09:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.23)  7 AUG 2017 04:01
 entering extended mode
-**Assignment1_784_final.tex
-("E:\My Documents\UoA Study\784\assignments\784\Assignment1_784_final.tex"
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for loaded.
-(C:\my\CTEX\MiKTeX\tex\latex\base\article.cls
-Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(C:\my\CTEX\MiKTeX\tex\latex\base\size10.clo
-File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./Assignment1_784_final.tex
+(./Assignment1_784_final.tex
+LaTeX2e <2017/01/01> patch level 3
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(c:/my/texlive/2016/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(c:/my/texlive/2016/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -21,41 +23,41 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(C:\my\CTEX\MiKTeX\tex\latex\ams\math\amsmath.sty
-Package: amsmath 2000/07/18 v2.13 AMS math features
+(c:/my/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/11/05 v2.16a AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-(C:\my\CTEX\MiKTeX\tex\latex\ams\math\amstext.sty
-Package: amstext 2000/06/29 v2.01
+(c:/my/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
 
-(C:\my\CTEX\MiKTeX\tex\latex\ams\math\amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0
+(c:/my/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks14
 \ex@=\dimen103
 ))
-(C:\my\CTEX\MiKTeX\tex\latex\ams\math\amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d
+(c:/my/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen104
 )
-(C:\my\CTEX\MiKTeX\tex\latex\ams\math\amsopn.sty
-Package: amsopn 1999/12/14 v2.01 operator names
+(c:/my/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count87
-LaTeX Info: Redefining \frac on input line 211.
+LaTeX Info: Redefining \frac on input line 213.
 \uproot@=\count88
 \leftroot@=\count89
-LaTeX Info: Redefining \overline on input line 307.
+LaTeX Info: Redefining \overline on input line 375.
 \classnum@=\count90
 \DOTSCASE@=\count91
-LaTeX Info: Redefining \ldots on input line 379.
-LaTeX Info: Redefining \dots on input line 382.
-LaTeX Info: Redefining \cdots on input line 467.
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen105
-LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \macc@depth=\count92
 \c@MaxMatrixCols=\count93
 \dotsspace@=\muskip10
@@ -76,74 +78,74 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \multlinegap=\skip44
 \multlinetaggap=\skip45
 \mathdisplay@stack=\toks18
-LaTeX Info: Redefining \[ on input line 2666.
-LaTeX Info: Redefining \] on input line 2667.
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
 )
-(C:\my\CTEX\MiKTeX\tex\latex\amsfonts\amsfonts.sty
-Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+(c:/my/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(C:\my\CTEX\MiKTeX\tex\latex\amsfonts\amssymb.sty
-Package: amssymb 2009/06/22 v3.00
+(c:/my/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-(C:\my\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(c:/my/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\my\CTEX\MiKTeX\tex\latex\graphics\keyval.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+(c:/my/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks19
 )
-(C:\my\CTEX\MiKTeX\tex\latex\graphics\graphics.sty
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+(c:/my/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\my\CTEX\MiKTeX\tex\latex\graphics\trig.sty
-Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+(c:/my/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(C:\my\CTEX\MiKTeX\tex\latex\00miktex\graphics.cfg
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(c:/my/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(C:\my\CTEX\MiKTeX\tex\latex\pdftex-def\pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+(c:/my/texlive/2016/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
 
-(C:\my\CTEX\MiKTeX\tex\generic\oberdiek\infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+(c:/my/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(C:\my\CTEX\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
-Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+(c:/my/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count99
 ))
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
-(C:\my\CTEX\MiKTeX\tex\latex\oberdiek\epstopdf.sty
-Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+(c:/my/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
 
-(C:\my\CTEX\MiKTeX\tex\latex\oberdiek\epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+(c:/my/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(C:\my\CTEX\MiKTeX\tex\latex\oberdiek\grfext.sty
-Package: grfext 2010/08/19 v1.1 Managing graphics extensions (HO)
+(c:/my/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-(C:\my\CTEX\MiKTeX\tex\generic\oberdiek\kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
+(c:/my/texlive/2016/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 ))
-(C:\my\CTEX\MiKTeX\tex\latex\oberdiek\kvoptions.sty
-Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
+(c:/my/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(C:\my\CTEX\MiKTeX\tex\generic\oberdiek\kvsetkeys.sty
-Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
+(c:/my/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-(C:\my\CTEX\MiKTeX\tex\generic\oberdiek\etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
+(c:/my/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
-(C:\my\CTEX\MiKTeX\tex\generic\oberdiek\ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+(c:/my/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
 Package etexcmds Info: Could not find \expanded.
@@ -151,26 +153,34 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-(C:\my\CTEX\MiKTeX\tex\generic\oberdiek\pdftexcmds.sty
-Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
+(c:/my/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
+)
 
-(C:\my\CTEX\MiKTeX\tex\generic\oberdiek\ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
+(c:/my/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-))
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(c:/my/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
 \c@theorem=\count100
 
-No file Assignment1_784_final.aux.
+(./Assignment1_784_final.aux)
+\openout1 = `Assignment1_784_final.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
 LaTeX Font Info:    ... okay on input line 62.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
@@ -183,7 +193,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
 LaTeX Font Info:    ... okay on input line 62.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
 LaTeX Font Info:    ... okay on input line 62.
-(C:\my\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii
+
+(c:/my/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count101
 \scratchdimen=\dimen114
@@ -198,13 +209,13 @@ LaTeX Font Info:    ... okay on input line 62.
 \everyMPtoPDFconversion=\toks21
 )
 LaTeX Font Info:    Try loading font information for U+msa on input line 68.
- (C:\my\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+ (c:/my/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 68.
 
-(C:\my\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+(c:/my/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
@@ -218,72 +229,126 @@ Overfull \vbox (47.75095pt too high) has occurred while \output is active []
 
 [1
 
-{C:/my/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}]
+{c:/my/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
+
+Overfull \hbox (11.70654pt too wide) in paragraph at lines 91--99
+[]\OT1/cmr/m/n/10 The third tech-nique is called Par-tial Least Squares Dis-cri
+m-i-nant Anal-y-sis (PLSDA).
+ []
+
 
 Overfull \vbox (47.75095pt too high) has occurred while \output is active []
 
 
 [2]
-Overfull \hbox (57.92451pt too wide) in paragraph at lines 169--169
+Overfull \hbox (57.92451pt too wide) in paragraph at lines 168--168
 []\OT1/cmtt/m/n/10 > URL = "https://www.stat.auckland.ac.nz/~lee/784/Assignment
 s/kc_house_data.csv"[] 
  []
 
 
-Overfull \hbox (0.17502pt too wide) in paragraph at lines 169--169
+Overfull \hbox (0.17502pt too wide) in paragraph at lines 168--168
 []\OT1/cmtt/m/n/10 > names(input.df) = c("id", "date", "price", "bedrooms", "ba
 throoms",[] 
  []
 
 
-Overfull \hbox (5.42497pt too wide) in paragraph at lines 169--169
+Overfull \hbox (42.17465pt too wide) in paragraph at lines 168--168
 []          \OT1/cmtt/m/n/10 id            date   price bedrooms bathrooms sqft
-lv sqftlot[] 
+lv sqftlot floors[] 
  []
 
 
-Overfull \hbox (5.42497pt too wide) in paragraph at lines 169--169
+Overfull \hbox (42.17465pt too wide) in paragraph at lines 168--168
 []\OT1/cmtt/m/n/10 1 7129300520 20141013T000000  221900        3      1.00   11
-80    5650[] 
+80    5650      1[] 
  []
 
 
-Overfull \hbox (5.42497pt too wide) in paragraph at lines 169--169
+Overfull \hbox (42.17465pt too wide) in paragraph at lines 168--168
 []\OT1/cmtt/m/n/10 2 6414100192 20141209T000000  538000        3      2.25   25
-70    7242[] 
+70    7242      2[] 
  []
 
 
-Overfull \hbox (5.42497pt too wide) in paragraph at lines 169--169
+Overfull \hbox (42.17465pt too wide) in paragraph at lines 168--168
 []\OT1/cmtt/m/n/10 3 5631500400 20150225T000000  180000        2      1.00    7
-70   10000[] 
+70   10000      1[] 
  []
 
 
-Overfull \hbox (5.42497pt too wide) in paragraph at lines 169--169
+Overfull \hbox (42.17465pt too wide) in paragraph at lines 168--168
 []\OT1/cmtt/m/n/10 4 2487200875 20141209T000000  604000        4      3.00   19
-60    5000[] 
+60    5000      1[] 
  []
 
 
-Overfull \hbox (5.42497pt too wide) in paragraph at lines 169--169
+Overfull \hbox (42.17465pt too wide) in paragraph at lines 168--168
 []\OT1/cmtt/m/n/10 5 1954400510 20150218T000000  510000        3      2.00   16
-80    8080[] 
+80    8080      1[] 
  []
 
 
-Overfull \hbox (5.42497pt too wide) in paragraph at lines 169--169
+Overfull \hbox (42.17465pt too wide) in paragraph at lines 168--168
 []\OT1/cmtt/m/n/10 6 7237550310 20140512T000000 1225000        4      4.50   54
-20  101930[] 
+20  101930      1[] 
  []
 
 
-Overfull \hbox (36.9247pt too wide) in paragraph at lines 169--169
+Overfull \hbox (5.42497pt too wide) in paragraph at lines 168--168
+[]  \OT1/cmtt/m/n/10 waterfr view cond grade sqfta sqftb  yrb  yrr   zip     la
+t     long[] 
+ []
+
+
+Overfull \hbox (5.42497pt too wide) in paragraph at lines 168--168
+[]\OT1/cmtt/m/n/10 1       0    0    3     7  1180     0 1955    0 98178 47.511
+2 -122.257[] 
+ []
+
+
+Overfull \hbox (5.42497pt too wide) in paragraph at lines 168--168
+[]\OT1/cmtt/m/n/10 2       0    0    3     7  2170   400 1951 1991 98125 47.721
+0 -122.319[] 
+ []
+
+
+Overfull \hbox (5.42497pt too wide) in paragraph at lines 168--168
+[]\OT1/cmtt/m/n/10 3       0    0    3     6   770     0 1933    0 98028 47.737
+9 -122.233[] 
+ []
+
+
+Overfull \hbox (5.42497pt too wide) in paragraph at lines 168--168
+[]\OT1/cmtt/m/n/10 4       0    0    5     7  1050   910 1965    0 98136 47.520
+8 -122.393[] 
+ []
+
+
+Overfull \hbox (5.42497pt too wide) in paragraph at lines 168--168
+[]\OT1/cmtt/m/n/10 5       0    0    3     8  1680     0 1987    0 98074 47.616
+8 -122.045[] 
+ []
+
+
+Overfull \hbox (5.42497pt too wide) in paragraph at lines 168--168
+[]\OT1/cmtt/m/n/10 6       0    0    3    11  3890  1530 2001    0 98053 47.656
+1 -122.005[] 
+ []
+
+
+Overfull \hbox (15.92488pt too wide) in paragraph at lines 168--168
 [] \OT1/cmtt/m/n/10 $ date     : Factor w/ 372 levels "20140502T000000",..: 165
- 221 291 221 284[] 
+ 221 291 221[] 
+ []
+
+
+Overfull \hbox (10.67493pt too wide) in paragraph at lines 168--168
+[] \OT1/cmtt/m/n/10 $ sqftlv   : int  1180 2570 770 1960 1680 5420 1715 1060 17
+80 1890 ...[] 
  []
 
 
@@ -291,55 +356,43 @@ Overfull \vbox (47.75095pt too high) has occurred while \output is active []
 
 
 [3]
-Overfull \hbox (10.67493pt too wide) in paragraph at lines 169--169
-[] \OT1/cmtt/m/n/10 $ sqftlv   : int  1180 2570 770 1960 1680 5420 1715 1060 17
-80 1890 ...[] 
- []
-
-
-Overfull \hbox (31.67474pt too wide) in paragraph at lines 169--169
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 168--168
 [] \OT1/cmtt/m/n/10 $ sqftlot  : int  5650 7242 10000 5000 8080 101930 6819 971
 1 7470 6560 ...[] 
  []
 
 
-Overfull \hbox (36.9247pt too wide) in paragraph at lines 169--169
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 168--168
 [] \OT1/cmtt/m/n/10 $ view     : Factor w/ 5 levels "0","1","2","3",..: 1 1 1 1
  1 1 1 1 1 1 ...[] 
  []
 
 
-Overfull \hbox (10.67493pt too wide) in paragraph at lines 169--169
+Overfull \hbox (10.67493pt too wide) in paragraph at lines 168--168
 [] \OT1/cmtt/m/n/10 $ sqfta    : int  1180 2170 770 1050 1680 3890 1715 1060 10
 50 1890 ...[] 
  []
 
 
-Overfull \hbox (15.92488pt too wide) in paragraph at lines 169--169
+Overfull \hbox (15.92488pt too wide) in paragraph at lines 168--168
 [] \OT1/cmtt/m/n/10 $ yrb      : int  1955 1951 1933 1965 1987 2001 1995 1963 1
 960 2003 ...[] 
  []
 
 
-Overfull \hbox (57.92451pt too wide) in paragraph at lines 169--169
-[] \OT1/cmtt/m/n/10 $ yrr      : Factor w/ 70 levels "0","1934","1940",..: 1 46
- 1 1 1 1 1 1 1 1 ...[] 
- []
-
-
-Overfull \hbox (68.42442pt too wide) in paragraph at lines 169--169
+Overfull \hbox (68.42442pt too wide) in paragraph at lines 168--168
 [] \OT1/cmtt/m/n/10 $ zip      : int  98178 98125 98028 98136 98074 98053 98003
  98198 98146 98038 ...[] 
  []
 
 
-Overfull \hbox (15.92488pt too wide) in paragraph at lines 169--169
+Overfull \hbox (15.92488pt too wide) in paragraph at lines 168--168
 [] \OT1/cmtt/m/n/10 $ sqftlv15 : int  1340 1690 2720 1360 1800 4760 2238 1650 1
 780 2390 ...[] 
  []
 
 
-Overfull \hbox (26.42479pt too wide) in paragraph at lines 169--169
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 168--168
 [] \OT1/cmtt/m/n/10 $ sqftlot15: int  5650 7639 8062 5000 7503 101930 6819 9711
  8113 7570 ...[] 
  []
@@ -350,22 +403,17 @@ Package epstopdf Info: Source file: <Symmetric.eps>
 (epstopdf)             Output file: <Symmetric-eps-converted-to.pdf>
 (epstopdf)                    date: 2017-08-05 05:03:59
 (epstopdf)                    size: 3870 bytes
-(epstopdf)             Command: <epstopdf --outfile=Symmetric-eps-converted-to.
-pdf Symmetric.eps>
-(epstopdf)             \includegraphics on input line 195.
+(epstopdf)             Command: <repstopdf --outfile=Symmetric-eps-converted-to
+.pdf Symmetric.eps>
+(epstopdf)             \includegraphics on input line 194.
 Package epstopdf Info: Output file is already uptodate.
-<Symmetric-eps-converted-to.pdf, id=18, 505.89pt x 505.89pt>
+<Symmetric-eps-converted-to.pdf, id=19, 505.89pt x 505.89pt>
 File: Symmetric-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Symmetric-eps-converted-to.pdf>
-Package pdftex.def Info: Symmetric-eps-converted-to.pdf used on input line 195.
+Package pdftex.def Info: Symmetric-eps-converted-to.pdf used on input line 194.
 
 (pdftex.def)             Requested size: 362.07182pt x 362.07912pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 195--207
-
- []
-
 
 Overfull \vbox (47.75095pt too high) has occurred while \output is active []
 
@@ -374,15 +422,18 @@ Overfull \vbox (47.75095pt too high) has occurred while \output is active []
 Overfull \vbox (47.75095pt too high) has occurred while \output is active []
 
 
-[5 <E:/My Documents/UoA Study/784/assignments/784/Symmetric-eps-converted-to.pd
-f>]
-Overfull \hbox (5.42497pt too wide) in paragraph at lines 278--278
+[5 <./Symmetric-eps-converted-to.pdf>]
+Overfull \hbox (5.42497pt too wide) in paragraph at lines 284--284
 []\OT1/cmtt/m/n/10 > ##########################################################
 ##########[] 
  []
 
 
-Overfull \hbox (15.92488pt too wide) in paragraph at lines 278--278
+Overfull \vbox (47.75095pt too high) has occurred while \output is active []
+
+
+[6]
+Overfull \hbox (15.92488pt too wide) in paragraph at lines 284--284
 []\OT1/cmtt/m/n/10 +               sample <- if(i==nfold) (max(sample)+1):n els
 e sample + m[] 
  []
@@ -391,30 +442,68 @@ e sample + m[]
 Overfull \vbox (47.75095pt too high) has occurred while \output is active []
 
 
-[6]
+[7]
 Overfull \vbox (47.75095pt too high) has occurred while \output is active []
 
 
-[7]
-Overfull \hbox (5.42497pt too wide) in paragraph at lines 356--356
+[8]
+Overfull \hbox (5.42497pt too wide) in paragraph at lines 376--376
 []\OT1/cmtt/m/n/10 Summary of sample sizes: 10000, 10000, 10000, 10000, 10000, 
 10000, ...[] 
  []
 
 
-Overfull \vbox (47.75095pt too high) has occurred while \output is active []
-
-
-[8]
-Overfull \hbox (63.17447pt too wide) in paragraph at lines 438--438
-[]\OT1/cmtt/m/n/10 lm(formula = log(transPrice[1:10000]) ~ grade + yrb + long, 
-data = kingCounty.df)[] 
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 (Intercept)        grade          lat       sqftlv          
+yrb        view1[] 
  []
 
 
-Overfull \hbox (63.17447pt too wide) in paragraph at lines 438--438
-[]\OT1/cmtt/m/n/10 lm(formula = log(transPrice[1:10000]) ~ grade + yrb + long, 
-data = kingCounty.df)[] 
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 505--505
+[] \OT1/cmtt/m/n/10 -2.211e+00    1.174e-02    1.040e-01    1.264e-02   -2.584e
+-04    1.388e-02[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 505--505
+[]      \OT1/cmtt/m/n/10 view2        view3        view4     sqftlv15    bathro
+oms         cond[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 505--505
+[]  \OT1/cmtt/m/n/10 9.002e-03    1.108e-02    1.622e-02    1.790e-02    4.577e
+-03    4.723e-03[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 505--505
+[]     \OT1/cmtt/m/n/10 floors     waterfr1    sqftlot15        sqfta        sq
+ftb     bedrooms[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 505--505
+[]  \OT1/cmtt/m/n/10 3.637e-03    2.961e-02   -3.098e-03    6.916e-06    5.486e
+-06   -1.341e-03[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 (Intercept)     bedrooms    bathrooms       sqftlv      sqft
+lot       floors[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 505--505
+[] \OT1/cmtt/m/n/10 -2.211e+00   -1.341e-03    4.577e-03    1.264e-02    8.757e
+-04    3.637e-03[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 505--505
+[]   \OT1/cmtt/m/n/10 waterfr1        view1        view2        view3        vi
+ew4         cond[] 
  []
 
 
@@ -422,28 +511,711 @@ Overfull \vbox (47.75095pt too high) has occurred while \output is active []
 
 
 [9]
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 505--505
+[]  \OT1/cmtt/m/n/10 2.961e-02    1.388e-02    9.002e-03    1.108e-02    1.622e
+-02    4.723e-03[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 505--505
+[]      \OT1/cmtt/m/n/10 grade        sqfta        sqftb          yrb          
+yrr          lat[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 505--505
+[]  \OT1/cmtt/m/n/10 1.174e-02    6.916e-06    5.486e-06   -2.584e-04    2.222e
+-06    1.040e-01[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 (Intercept)     bedrooms    bathrooms       sqftlv      sqft
+lot       floors[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 505--505
+[] \OT1/cmtt/m/n/10 -2.211e+00   -1.341e-03    4.577e-03    1.264e-02    8.757e
+-04    3.637e-03[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 505--505
+[]   \OT1/cmtt/m/n/10 waterfr1        view1        view2        view3        vi
+ew4         cond[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 505--505
+[]  \OT1/cmtt/m/n/10 2.961e-02    1.388e-02    9.002e-03    1.108e-02    1.622e
+-02    4.723e-03[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 505--505
+[]      \OT1/cmtt/m/n/10 grade        sqfta        sqftb          yrb          
+yrr          lat[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 505--505
+[]  \OT1/cmtt/m/n/10 1.174e-02    6.916e-06    5.486e-06   -2.584e-04    2.222e
+-06    1.040e-01[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 505--505
+[]    \OT1/cmtt/m/n/10 rssp sigma2 adjRsq        Cp      AIC      BIC    CV bed
+rooms bathrooms[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 1  8.101  0.001  0.488 12035.281 22035.28 22049.70 0.810    
+    0         0[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 2  5.777  0.001  0.635  5717.636 15717.64 15739.27 0.578    
+    0         0[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 3  4.806  0.000  0.696  3077.784 13077.78 13106.62 0.481    
+    0         0[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 4  4.298  0.000  0.728  1698.871 11698.87 11734.92 0.430    
+    0         0[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 5  4.139  0.000  0.738  1269.514 11269.51 11312.78 0.415    
+    0         0[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 6  4.025  0.000  0.745   960.341 10960.34 11010.81 0.403    
+    0         0[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 7  3.930  0.000  0.751   703.268 10703.27 10760.95 0.394    
+    0         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 8  3.884  0.000  0.754   579.988 10579.99 10644.88 0.389    
+    0         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 9  3.839  0.000  0.757   459.820 10459.82 10531.92 0.385    
+    0         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 10 3.810  0.000  0.759   384.113 10384.11 10463.43 0.382    
+    0         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 11 3.787  0.000  0.760   324.011 10324.01 10410.53 0.380    
+    0         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 12 3.761  0.000  0.762   253.468 10253.47 10347.20 0.377    
+    0         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 13 3.731  0.000  0.764   174.060 10174.06 10275.00 0.374    
+    0         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 14 3.713  0.000  0.765   127.229 10127.23 10235.38 0.373    
+    0         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 15 3.700  0.000  0.766    95.360 10095.36 10210.73 0.372    
+    1         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 16 3.687  0.000  0.766    62.038 10062.04 10184.61 0.370    
+    0         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 17 3.677  0.000  0.767    35.725 10035.73 10165.51 0.370    
+    1         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 18 3.670  0.000  0.768    19.334 10019.33 10156.33 0.369    
+    1         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 19 3.669  0.000  0.768    19.031 10019.03 10163.24 0.369    
+    1         1[] 
+ []
+
+
 Overfull \vbox (47.75095pt too high) has occurred while \output is active []
 
 
-[10] ("E:\My Documents\UoA Study\784\assignments\784\Assignment1_784_final.aux"
-) ) 
+[10]
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 20 3.669  0.000  0.768    21.000 10021.00 10172.42 0.369    
+    1         1[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 505--505
+[]   \OT1/cmtt/m/n/10 sqftlv sqftlot floors waterfr1 view1 view2 view3 view4 co
+nd grade sqfta[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 1       0       0      0        0     0     0     0     0   
+ 0     1     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 2       1       0      0        0     0     0     0     0   
+ 0     0     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 3       1       0      0        0     0     0     0     0   
+ 0     1     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 4       1       0      0        0     0     0     0     0   
+ 0     1     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 5       1       0      0        1     0     0     0     0   
+ 0     1     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 6       1       0      0        1     0     0     0     0   
+ 0     1     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 7       1       0      0        1     0     0     0     0   
+ 0     1     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 8       1       0      0        1     0     0     0     0   
+ 1     1     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 9       1       0      1        1     0     0     0     0   
+ 1     1     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 10      0       0      1        1     0     0     0     0   
+ 1     1     1[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 11      0       0      1        1     0     1     0     0   
+ 1     1     1[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 12      1       0      1        1     0     1     1     1   
+ 1     1     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 13      1       0      1        1     1     1     1     1   
+ 1     1     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 14      1       0      0        1     1     1     1     1   
+ 1     1     1[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 15      1       0      0        1     1     1     1     1   
+ 1     1     1[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 16      1       0      1        1     1     1     1     1   
+ 1     1     1[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 17      1       0      1        1     1     1     1     1   
+ 1     1     1[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 18      1       0      1        1     1     1     1     1   
+ 1     1     1[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 19      1       1      1        1     1     1     1     1   
+ 1     1     1[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 505--505
+[]\OT1/cmtt/m/n/10 20      1       1      1        1     1     1     1     1   
+ 1     1     1[] 
+ []
+
+
+Overfull \vbox (47.75095pt too high) has occurred while \output is active []
+
+
+[11]
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 (Intercept)        grade          lat       sqftlv          
+yrb        view1[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 635--635
+[] \OT1/cmtt/m/n/10 -5.412e+01    1.559e-01    1.358e+00    1.387e-04   -3.304e
+-03    1.832e-01[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 635--635
+[]      \OT1/cmtt/m/n/10 view2        view3        view4    bathrooms     sqftl
+v15         cond[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 635--635
+[]  \OT1/cmtt/m/n/10 1.163e-01    1.279e-01    2.092e-01    7.165e-02    1.072e
+-04    6.298e-02[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 635--635
+[]     \OT1/cmtt/m/n/10 floors     waterfr1      sqftlot          yrr     bedro
+oms         long[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 635--635
+[]  \OT1/cmtt/m/n/10 6.822e-02    3.944e-01    3.969e-07    2.904e-05   -9.046e
+-03   -5.663e-02[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 (Intercept)     bedrooms    bathrooms       sqftlv      sqft
+lot       floors[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 635--635
+[] \OT1/cmtt/m/n/10 -4.700e+01   -9.119e-03    7.158e-02    1.425e-04    3.952e
+-07    7.133e-02[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 635--635
+[]   \OT1/cmtt/m/n/10 waterfr1        view1        view2        view3        vi
+ew4         cond[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 635--635
+[]  \OT1/cmtt/m/n/10 3.963e-01    1.867e-01    1.178e-01    1.298e-01    2.107e
+-01    6.211e-02[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 635--635
+[]      \OT1/cmtt/m/n/10 grade        sqfta        sqftb          yrb          
+yrr          lat[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 635--635
+[]  \OT1/cmtt/m/n/10 1.578e-01   -6.790e-06           NA   -3.414e-03    2.820e
+-05    1.359e+00[] 
+ []
+
+
+Overfull \vbox (47.75095pt too high) has occurred while \output is active []
+
+
+[12]
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 (Intercept)     bedrooms    bathrooms       sqftlv      sqft
+lot       floors[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 635--635
+[] \OT1/cmtt/m/n/10 -4.700e+01   -9.119e-03    7.158e-02    1.425e-04    3.952e
+-07    7.133e-02[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 635--635
+[]   \OT1/cmtt/m/n/10 waterfr1        view1        view2        view3        vi
+ew4         cond[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 635--635
+[]  \OT1/cmtt/m/n/10 3.963e-01    1.867e-01    1.178e-01    1.298e-01    2.107e
+-01    6.211e-02[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 635--635
+[]      \OT1/cmtt/m/n/10 grade        sqfta        sqftb          yrb          
+yrr          lat[] 
+ []
+
+
+Overfull \hbox (36.9247pt too wide) in paragraph at lines 635--635
+[]  \OT1/cmtt/m/n/10 1.578e-01   -6.790e-06           NA   -3.414e-03    2.820e
+-05    1.359e+00[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 635--635
+[]    \OT1/cmtt/m/n/10 rssp sigma2 adjRsq        Cp      AIC      BIC    CV bed
+rooms bathrooms[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 1  8.101  0.001  0.488 12035.281 22035.28 22049.70 0.810    
+    0         0[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 2  5.777  0.001  0.635  5717.636 15717.64 15739.27 0.578    
+    0         0[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 3  4.806  0.000  0.696  3077.784 13077.78 13106.62 0.481    
+    0         0[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 4  4.298  0.000  0.728  1698.871 11698.87 11734.92 0.430    
+    0         0[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 5  4.139  0.000  0.738  1269.514 11269.51 11312.78 0.415    
+    0         0[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 6  4.025  0.000  0.745   960.341 10960.34 11010.81 0.403    
+    0         0[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 7  3.930  0.000  0.751   703.268 10703.27 10760.95 0.394    
+    0         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 8  3.884  0.000  0.754   579.988 10579.99 10644.88 0.389    
+    0         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 9  3.839  0.000  0.757   459.820 10459.82 10531.92 0.385    
+    0         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 10 3.810  0.000  0.759   384.113 10384.11 10463.43 0.382    
+    0         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 11 3.787  0.000  0.760   324.011 10324.01 10410.53 0.380    
+    0         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 12 3.761  0.000  0.762   253.468 10253.47 10347.20 0.377    
+    0         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 13 3.731  0.000  0.764   174.060 10174.06 10275.00 0.374    
+    0         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 14 3.713  0.000  0.765   127.229 10127.23 10235.38 0.373    
+    0         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 15 3.700  0.000  0.766    95.360 10095.36 10210.73 0.372    
+    1         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 16 3.687  0.000  0.766    62.038 10062.04 10184.61 0.370    
+    0         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 17 3.677  0.000  0.767    35.725 10035.73 10165.51 0.370    
+    1         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 18 3.670  0.000  0.768    19.334 10019.33 10156.33 0.369    
+    1         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 19 3.669  0.000  0.768    19.031 10019.03 10163.24 0.369    
+    1         1[] 
+ []
+
+
+Overfull \hbox (31.67474pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 20 3.669  0.000  0.768    21.000 10021.00 10172.42 0.369    
+    1         1[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 635--635
+[]   \OT1/cmtt/m/n/10 sqftlv sqftlot floors waterfr1 view1 view2 view3 view4 co
+nd grade sqfta[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 1       0       0      0        0     0     0     0     0   
+ 0     1     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 2       1       0      0        0     0     0     0     0   
+ 0     0     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 3       1       0      0        0     0     0     0     0   
+ 0     1     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 4       1       0      0        0     0     0     0     0   
+ 0     1     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 5       1       0      0        1     0     0     0     0   
+ 0     1     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 6       1       0      0        1     0     0     0     0   
+ 0     1     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 7       1       0      0        1     0     0     0     0   
+ 0     1     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 8       1       0      0        1     0     0     0     0   
+ 1     1     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 9       1       0      1        1     0     0     0     0   
+ 1     1     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 10      0       0      1        1     0     0     0     0   
+ 1     1     1[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 11      0       0      1        1     0     1     0     0   
+ 1     1     1[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 12      1       0      1        1     0     1     1     1   
+ 1     1     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 13      1       0      1        1     1     1     1     1   
+ 1     1     0[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 14      1       0      0        1     1     1     1     1   
+ 1     1     1[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 15      1       0      0        1     1     1     1     1   
+ 1     1     1[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 16      1       0      1        1     1     1     1     1   
+ 1     1     1[] 
+ []
+
+
+Overfull \vbox (47.75095pt too high) has occurred while \output is active []
+
+
+[13]
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 17      1       0      1        1     1     1     1     1   
+ 1     1     1[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 18      1       0      1        1     1     1     1     1   
+ 1     1     1[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 19      1       1      1        1     1     1     1     1   
+ 1     1     1[] 
+ []
+
+
+Overfull \hbox (26.42479pt too wide) in paragraph at lines 635--635
+[]\OT1/cmtt/m/n/10 20      1       1      1        1     1     1     1     1   
+ 1     1     1[] 
+ []
+
+
+Overfull \vbox (47.75095pt too high) has occurred while \output is active []
+
+
+[14] (./Assignment1_784_final.aux) ) 
 Here is how much of TeX's memory you used:
- 2422 strings out of 495354
- 30894 string characters out of 3183691
- 92510 words of memory out of 3000000
- 5561 multiletter control sequences out of 15000+200000
- 12068 words of font info for 47 fonts, out of 3000000 for 9000
- 14 hyphenation exceptions out of 8191
- 42i,7n,23p,631b,246s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/my/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/my/CTEX/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/my/CTEX/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmr10.pfb><C:/my/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmr12.pfb><C:/my/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/my/CT
-EX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/my/CTEX/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Assignment1_784_final.pdf (10 pages, 120806 bytes).
+ 2477 strings out of 493013
+ 32638 string characters out of 6135616
+ 108478 words of memory out of 5000000
+ 5988 multiletter control sequences out of 15000+600000
+ 12068 words of font info for 47 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 42i,7n,24p,632b,246s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/my/texlive/2016/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbx12.pfb><c:/my/texlive/2016/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbxti10.pfb><c:/my/texlive/2016/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr10.pfb><c:/my/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr12.pfb><c:/my/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17
+.pfb><c:/my/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+c:/my/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Assignment1_784_final.pdf (14 pages, 116854 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
+ 83 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
