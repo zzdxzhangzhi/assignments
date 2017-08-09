@@ -1,0 +1,210 @@
+Athens,Barcelona,3313
+Athens,Brussels,2963
+Athens,Calais,3175
+Athens,Cherbourg,3339
+Athens,Cologne,2762
+Athens,Copenhagen,3276
+Athens,Geneva,2610
+Athens,Gibraltar,4485
+Athens,Hamburg,2977
+Athens,Hook of Holland,3030
+Athens,Lisbon,4532
+Athens,Lyons,2753
+Athens,Madrid,3949
+Athens,Marseilles,2865
+Athens,Milan,2282
+Athens,Munich,2179
+Athens,Paris,3000
+Athens,Rome,817
+Athens,Stockholm,3927
+Athens,Vienna,1991
+Barcelona,Brussels,1318
+Barcelona,Calais,1326
+Barcelona,Cherbourg,1294
+Barcelona,Cologne,1498
+Barcelona,Copenhagen,2218
+Barcelona,Geneva,803
+Barcelona,Gibraltar,1172
+Barcelona,Hamburg,2018
+Barcelona,Hook of Holland,1490
+Barcelona,Lisbon,1305
+Barcelona,Lyons,645
+Barcelona,Madrid,636
+Barcelona,Marseilles,521
+Barcelona,Milan,1014
+Barcelona,Munich,1365
+Barcelona,Paris,1033
+Barcelona,Rome,1460
+Barcelona,Stockholm,2868
+Barcelona,Vienna,1802
+Brussels,Calais,204
+Brussels,Cherbourg,583
+Brussels,Cologne,206
+Brussels,Copenhagen,966
+Brussels,Geneva,677
+Brussels,Gibraltar,2256
+Brussels,Hamburg,597
+Brussels,Hook of Holland,172
+Brussels,Lisbon,2084
+Brussels,Lyons,690
+Brussels,Madrid,1558
+Brussels,Marseilles,1011
+Brussels,Milan,925
+Brussels,Munich,747
+Brussels,Paris,285
+Brussels,Rome,1511
+Brussels,Stockholm,1616
+Brussels,Vienna,1175
+Calais,Cherbourg,460
+Calais,Cologne,409
+Calais,Copenhagen,1136
+Calais,Geneva,747
+Calais,Gibraltar,2224
+Calais,Hamburg,714
+Calais,Hook of Holland,330
+Calais,Lisbon,2052
+Calais,Lyons,739
+Calais,Madrid,1550
+Calais,Marseilles,1059
+Calais,Milan,1077
+Calais,Munich,977
+Calais,Paris,280
+Calais,Rome,1662
+Calais,Stockholm,1786
+Calais,Vienna,1381
+Cherbourg,Cologne,785
+Cherbourg,Copenhagen,1545
+Cherbourg,Geneva,853
+Cherbourg,Gibraltar,2047
+Cherbourg,Hamburg,1115
+Cherbourg,Hook of Holland,731
+Cherbourg,Lisbon,1827
+Cherbourg,Lyons,789
+Cherbourg,Madrid,1347
+Cherbourg,Marseilles,1101
+Cherbourg,Milan,1209
+Cherbourg,Munich,1160
+Cherbourg,Paris,340
+Cherbourg,Rome,1794
+Cherbourg,Stockholm,2196
+Cherbourg,Vienna,1588
+Cologne,Copenhagen,760
+Cologne,Geneva,1662
+Cologne,Gibraltar,2436
+Cologne,Hamburg,460
+Cologne,Hook of Holland,269
+Cologne,Lisbon,2290
+Cologne,Lyons,714
+Cologne,Madrid,1764
+Cologne,Marseilles,1035
+Cologne,Milan,911
+Cologne,Munich,583
+Cologne,Paris,465
+Cologne,Rome,1497
+Cologne,Stockholm,1403
+Cologne,Vienna,937
+Copenhagen,Geneva,1418
+Copenhagen,Gibraltar,3196
+Copenhagen,Hamburg,460
+Copenhagen,Hook of Holland,269
+Copenhagen,Lisbon,2971
+Copenhagen,Lyons,1458
+Copenhagen,Madrid,2498
+Copenhagen,Marseilles,1778
+Copenhagen,Milan,1537
+Copenhagen,Munich,1104
+Copenhagen,Paris,1176
+Copenhagen,Rome,2050
+Copenhagen,Stockholm,650
+Copenhagen,Vienna,1455
+Geneva,Gibraltar,1975
+Geneva,Hamburg,1118
+Geneva,Hook of Holland,895
+Geneva,Lisbon,1936
+Geneva,Lyons,158
+Geneva,Madrid,1439
+Geneva,Marseilles,425
+Geneva,Milan,328
+Geneva,Munich,591
+Geneva,Paris,513
+Geneva,Rome,995
+Geneva,Stockholm,2068
+Geneva,Vienna,1019
+Gibraltar,Hamburg,2897
+Gibraltar,Hook of Holland,2428
+Gibraltar,Lisbon,676
+Gibraltar,Lyons,1817
+Gibraltar,Madrid,698
+Gibraltar,Marseilles,1693
+Gibraltar,Milan,2185
+Gibraltar,Munich,2565
+Gibraltar,Paris,1971
+Gibraltar,Rome,2631
+Gibraltar,Stockholm,3886
+Gibraltar,Vienna,2974
+Hamburg,Hook of Holland,550
+Hamburg,Lisbon,2671
+Hamburg,Lyons,1159
+Hamburg,Madrid,2198
+Hamburg,Marseilles,1479
+Hamburg,Milan,1238
+Hamburg,Munich,805
+Hamburg,Paris,877
+Hamburg,Rome,1751
+Hamburg,Stockholm,949
+Hamburg,Vienna,1155
+Hook of Holland,Lisbon,2280
+Hook of Holland,Lyons,863
+Hook of Holland,Madrid,1730
+Hook of Holland,Marseilles,1183
+Hook of Holland,Milan,1098
+Hook of Holland,Munich,851
+Hook of Holland,Paris,457
+Hook of Holland,Rome,1683
+Hook of Holland,Stockholm,1500
+Hook of Holland,Vienna,1205
+Lisbon,Lyons,1178
+Lisbon,Madrid,668
+Lisbon,Marseilles,1762
+Lisbon,Milan,2250
+Lisbon,Munich,2507
+Lisbon,Paris,1799
+Lisbon,Rome,2700
+Lisbon,Stockholm,3231
+Lisbon,Vienna,2937
+Lyons,Madrid,1281
+Lyons,Marseilles,320
+Lyons,Milan,328
+Lyons,Munich,724
+Lyons,Paris,471
+Lyons,Rome,1048
+Lyons,Stockholm,2108
+Lyons,Vienna,1157
+Madrid,Marseilles,1157
+Madrid,Milan,1724
+Madrid,Munich,2010
+Madrid,Paris,1273
+Madrid,Rome,2097
+Madrid,Stockholm,3188
+Madrid,Vienna,2409
+Marseilles,Milan,618
+Marseilles,Munich,1109
+Marseilles,Paris,792
+Marseilles,Rome,1011
+Marseilles,Stockholm,2428
+Marseilles,Vienna,1363
+Milan,Munich,331
+Milan,Paris,856
+Milan,Rome,586
+Milan,Stockholm,2187
+Milan,Vienna,898
+Munich,Paris,821
+Munich,Rome,946
+Munich,Stockholm,1754
+Munich,Vienna,428
+Paris,Rome,1476
+Paris,Stockholm,1827
+Paris,Vienna,1249
+Rome,Stockholm,2707
+Rome,Vienna,1209
+Stockholm,Vienna,2105
