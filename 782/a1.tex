@@ -129,21 +129,21 @@
 +   colnum = ncol(df)
 +   distances = numeric(rownum %/% 2)
 +   cityvec.sort = sort(cityvec)
-+   for (i in 2:rownum) {
++   for (i in seq(2, rownum, by = 2)) {
 +     # find the row number of two distances from 1 same city
 +     twodt.No = rows[df[, col] == cityvec.sort[i]]
 +     # add the two distance from the same sity
 +     distances[i %/% 2] = df[twodt.No[1], colnum] + df[twodt.No[2], colnum]
 +   }
-+
++   
 +   mindt = min(distances)
 +   distance_num = 1:length(distances)
 +   min_num = distance_num[distances == mindt]
-+
++ 
 +   min_city = cityvec.sort[min_num * 2]
 +   list(city = min_city, min = mindt)
 + }
->
+> 
 > lst1 = findcity.min(start.df, 2, start.df$Barcelona)
 > lst1
 $city
@@ -155,14 +155,14 @@ $min
 > lst2 = findcity.min(end.df, 1, end.df$Athens)
 > lst2
 $city
-[1] "Cologne"   "Gibraltar" "Milan"
+[1] "Copenhagen" "Hamburg"    "Munich"    
 
 $min
 [1] 2700
 
->
+> 
 > if (lst1$min < lst2$min) lst1$city else lst2$city
-[1] "Cologne"   "Gibraltar" "Milan" \end{verbatim}
+[1] "Copenhagen" "Hamburg"    "Munich" \end{verbatim}
     \end{enumerate}
     \item[3.] The answers are below:
     \begin{enumerate}
