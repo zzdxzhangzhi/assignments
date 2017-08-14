@@ -1,0 +1,307 @@
+> seq(1, 28, by = 3)
+ [1]  1  4  7 10 13 16 19 22 25 28
+> paste(rep(letters[-1:-23], 3:1), rep(letters[1:3], 2), sep = "")
+[1] "xa" "xb" "xc" "ya" "yb" "zc"
+> rep(1:3 < 2, 2) 
+[1]  TRUE FALSE FALSE  TRUE FALSE FALSE
+> cumsum(10^(seq(0, 8, by = 2)))
+[1]         1       101     10101   1010101 101010101
+> 1:4 + rep(0:3, rep(4, 4))
+ [1] 1 2 3 4 2 3 4 5 3 4 5 6 4 5 6 7
+> 
+> URL = "https://raw.githubusercontent.com/zzdxzhangzhi/assignments/adb70032ccc89e683055814da4c87727fcaf332a/782/eurocities.csv"
+> eurocities.df = read.csv(URL, stringsAsFactors = FALSE)
+> str(eurocities.df)
+'data.frame':	209 obs. of  3 variables:
+ $ Athens   : chr  "Athens" "Athens" "Athens" "Athens" ...
+ $ Barcelona: chr  "Brussels" "Calais" "Cherbourg" "Cologne" ...
+ $ X3313    : int  2963 3175 3339 2762 3276 2610 4485 2977 3030 4532 ...
+> head(eurocities.df)
+  Athens  Barcelona X3313
+1 Athens   Brussels  2963
+2 Athens     Calais  3175
+3 Athens  Cherbourg  3339
+4 Athens    Cologne  2762
+5 Athens Copenhagen  3276
+6 Athens     Geneva  2610
+> 
+> distance.mean = mean(eurocities.df$X3313)
+> distance.mean
+[1] 1496.498
+> maxd = max(eurocities.df$X3313)
+> con = (eurocities.df$X3313 == maxd)
+> maxdnum = rownames(eurocities.df)[con]
+> eurocities.df[maxdnum, 1:2]
+   Athens Barcelona
+10 Athens    Lisbon
+> maxdnum = which.max(eurocities.df$X3313)
+> maxpair = c(eurocities.df$Athens[maxdnum], eurocities.df$Barcelona[maxdnum])
+> maxpair
+[1] "Athens" "Lisbon"
+> 
+> paris_300k = ((eurocities.df$Athens == "Paris" 
++                | eurocities.df$Barcelona == "Paris") 
++               & eurocities.df$X3313 <= 300)
+> sum(paris_300k)
+[1] 2
+> 
+> length(which((eurocities.df$Athens == "Paris" 
++        | eurocities.df$Barcelona == "Paris") 
++       & eurocities.df$X3313 <= 300))
+[1] 2
+> 
+> num = which(eurocities.df$Athens == "Copenhagen" 
++             | eurocities.df$Barcelona == "Copenhagen")
+> 
+> copenhargen.df = data.frame(eurocities.df[num,])
+> d_sort = sort(copenhargen.df$X3313)
+> d_min3 = d_sort[1:3]
+> d_min3
+[1] 269 460 650
+> 
+> cities3 = character(3)
+> for (i in 1:3) {
++   min_No = which(copenhargen.df$X3313 == d_min3[i])
++   cities3[i] = copenhargen.df$Barcelona[min_No]
++   if (cities3[i] == "Copenhagen")
++     cities3[i] = copenhargen.df$Athens[min_No]
++ }
+> cities3
+[1] "Hook of Holland" "Hamburg"         "Stockholm"      
+> 
+> num_start = which((eurocities.df$Athens == "Rome"
++                   | eurocities.df$Athens == "Stockholm")
++                   & (eurocities.df$Barcelona != "Rome"
++                      & eurocities.df$Barcelona != "Stockholm"))
+> num_end = which((eurocities.df$Barcelona == "Rome"
++                 | eurocities.df$Barcelona == "Stockholm")
++                 & (eurocities.df$Athens != "Rome"
++                    & eurocities.df$Athens != "Stockholm"))
+> 
+> start.df = data.frame(eurocities.df[num_start,])
+> end.df = data.frame(eurocities.df[num_end,])
+> start.df
+       Athens Barcelona X3313
+208      Rome    Vienna  1209
+209 Stockholm    Vienna  2105
+> end.df
+             Athens Barcelona X3313
+17           Athens      Rome   817
+18           Athens Stockholm  3927
+36        Barcelona      Rome  1460
+37        Barcelona Stockholm  2868
+54         Brussels      Rome  1511
+55         Brussels Stockholm  1616
+71           Calais      Rome  1662
+72           Calais Stockholm  1786
+87        Cherbourg      Rome  1794
+88        Cherbourg Stockholm  2196
+102         Cologne      Rome  1497
+103         Cologne Stockholm  1403
+116      Copenhagen      Rome  2050
+117      Copenhagen Stockholm   650
+129          Geneva      Rome   995
+130          Geneva Stockholm  2068
+141       Gibraltar      Rome  2631
+142       Gibraltar Stockholm  3886
+152         Hamburg      Rome  1751
+153         Hamburg Stockholm   949
+162 Hook of Holland      Rome  1683
+163 Hook of Holland Stockholm  1500
+171          Lisbon      Rome  2700
+172          Lisbon Stockholm  3231
+179           Lyons      Rome  1048
+180           Lyons Stockholm  2108
+186          Madrid      Rome  2097
+187          Madrid Stockholm  3188
+192      Marseilles      Rome  1011
+193      Marseilles Stockholm  2428
+197           Milan      Rome   586
+198           Milan Stockholm  2187
+201          Munich      Rome   946
+202          Munich Stockholm  1754
+204           Paris      Rome  1476
+205           Paris Stockholm  1827
+> 
+> ## col is the column that contain the other same cities to the 2 cities
+> findcity.min = function(df, col, cityvec) {
++   rows = rownames(df)
++   rownum = nrow(df)
++   colnum = ncol(df)
++   distances = numeric(rownum %/% 2)
++   cityvec.sort = sort(cityvec)
++   for (i in 2:rownum) {
++     # find the row number of two distances from 1 same city
++     twodt.No = rows[df[, col] == cityvec.sort[i]]
++     # add the two distance from the same sity
++     distances[i %/% 2] = df[twodt.No[1], colnum] + df[twodt.No[2], colnum]
++   }
++   
++   mindt = min(distances)
++   distance_num = 1:length(distances)
++   min_num = distance_num[distances == mindt]
++ 
++   min_city = cityvec.sort[min_num * 2]
++   list(city = min_city, min = mindt)
++ }
+> 
+> lst1 = findcity.min(start.df, 2, start.df$Barcelona)
+> lst1
+$city
+[1] "Vienna"
+
+$min
+[1] 3314
+
+> lst2 = findcity.min(end.df, 1, end.df$Athens)
+> lst2
+$city
+[1] "Cologne"   "Gibraltar" "Milan"    
+
+$min
+[1] 2700
+
+> 
+> if (lst1$min < lst2$min) lst1$city else lst2$city
+[1] "Cologne"   "Gibraltar" "Milan"    
+> 
+> hemite1 = function(xseq, n) {
++   for (x in xseq) {
++     res = 0
++     for (m in 0:floor(n / 2)) {
++       res = res + (-1)^m / (factorial(m) * factorial(n - 2 * m)) * x^(n - 2 * m) / 2^m
++     }
++     print(factorial(n) * res)
++   }
++ }
+> 
+> hemite1(seq(-2, 2, by = .2), 5)
+[1] 18
+[1] 12.42432
+[1] 6.47424
+[1] 1.06176
+[1] -3.20832
+[1] -6
+[1] -7.20768
+[1] -6.91776
+[1] -5.37024
+[1] -2.92032
+[1] 0
+[1] 2.92032
+[1] 5.37024
+[1] 6.91776
+[1] 7.20768
+[1] 6
+[1] 3.20832
+[1] -1.06176
+[1] -6.47424
+[1] -12.42432
+[1] -18
+> 
+> hemite2 = function(xseq, n) {
++   for (x in xseq) {
++     upval = floor(n / 2)
++     mrange = 0:upval
++     res = factorial(n) * sum((-1)^mrange 
++                              / (factorial(mrange) * factorial(n - 2 * mrange))
++                              * x^(n - 2 * mrange) / 2^mrange)
++     print(res)
++   }
++ }
+> 
+> hemite2(seq(-2, 2, by = .2), 5)
+[1] 18
+[1] 12.42432
+[1] 6.47424
+[1] 1.06176
+[1] -3.20832
+[1] -6
+[1] -7.20768
+[1] -6.91776
+[1] -5.37024
+[1] -2.92032
+[1] 0
+[1] 2.92032
+[1] 5.37024
+[1] 6.91776
+[1] 7.20768
+[1] 6
+[1] 3.20832
+[1] -1.06176
+[1] -6.47424
+[1] -12.42432
+[1] -18
+> 
+> hemite3.1 = function(x, m, n) {
++   (-1)^m / (factorial(m) * factorial(n - 2 * m)) * x^(n - 2 * m) / 2^m
++ }
+> 
+> hemite3.2 = function(x, n) {
++   factorial(n) * sum(x)
++ }
+> 
+> hemite.seq = function(x, n) {
++   m = 0:floor(n / 2)
++   hemite3.3 = function(x, m) hemite3.1(x, m, n)
++   hemite3.4 = function(x) hemite3.2(x, n)
++   
++   o = outer(x, m, hemite3.3)
++   apply(o, 1, hemite3.4)
++ }
+> x = seq(-2, 2, by = .2)
+> hemite.seq(x, 5)
+ [1]  18.00000  12.42432   6.47424   1.06176  -3.20832  -6.00000  -7.20768  -6.91776  -5.37024  -2.92032
+[11]   0.00000   2.92032   5.37024   6.91776   7.20768   6.00000   3.20832  -1.06176  -6.47424 -12.42432
+[21] -18.00000
+> 
+> hemite.coef = function(n) {
++   if (n > 0) {
++     x = seq(length = n + 1, from = 1)
++     
++     # contruct the value matrix
++     A = outer(x, 0:n, "^")
++     H = hemite.seq(x, n)
++     
++     # using round when x are not intergers
++     round(solve(A, H))
++   }
++   else 1
++ }
+> 
+> hemite = function(n) {
++   coef.matrix = matrix(0, nrow = n + 1, ncol = n + 1,
++                        dimnames = list(paste("H", 0:n, sep = ""), 
++                                        paste("x^", 0:n, sep = "")))
++   for (i in 0:n) {
++     coef.matrix[i + 1,] = c(hemite.coef(i), rep(0, n - i))
++   }
++   coef.matrix
++ }
+> 
+> hemite(0)
+   x^0
+H0   1
+> hemite(1)
+   x^0 x^1
+H0   1   0
+H1   0   1
+> hemite(3)
+   x^0 x^1 x^2 x^3
+H0   1   0   0   0
+H1   0   1   0   0
+H2  -1   0   1   0
+H3   0  -3   0   1
+> hemite(10)
+     x^0  x^1  x^2   x^3   x^4 x^5 x^6 x^7 x^8 x^9 x^10
+H0     1    0    0     0     0   0   0   0   0   0    0
+H1     0    1    0     0     0   0   0   0   0   0    0
+H2    -1    0    1     0     0   0   0   0   0   0    0
+H3     0   -3    0     1     0   0   0   0   0   0    0
+H4     3    0   -6     0     1   0   0   0   0   0    0
+H5     0   15    0   -10     0   1   0   0   0   0    0
+H6   -15    0   45     0   -15   0   1   0   0   0    0
+H7     0 -105    0   105     0 -21   0   1   0   0    0
+H8   105    0 -420     0   210   0 -28   0   1   0    0
+H9     0  945    0 -1260     0 378   0 -36   0   1    0
+H10 -945    0 4725     0 -3150   0 630   0 -45   0    1
+> 
