@@ -161,4 +161,103 @@ hemite(1)
 hemite(3)
 hemite(10)
 
+f = function(x) sin(x) + exp((-1) * x / 10)
 
+root = function(f, interval) {
+  a = interval[1]
+  b = interval[2]
+  
+  i = 1
+  while ((f(a) * f(b)) < 0 
+         && abs(f(a) - f(b)) > 1e-08
+         && i < 1000) {
+    c = (a + b) / 2
+    tmp = f(c)
+    if(sign(tmp) == sign(f(a)))
+      a = c
+    else
+      b = c
+    
+    i = i + 1
+  }
+  
+  if (i < 1000) {
+    if ((f(a) * f(b)) < 0) a
+    else {
+      print("couldn't find root within this interval!")
+      NA
+    }
+  }
+  else {
+    print("no root can be found!")
+    NA
+  }
+}
+
+root(f, c(0, 5))
+root(f, c(5, 9))
+
+allroot = function(f, interval) {
+  a = interval[1]
+  b = interval[2]
+  points = seq(a, b, length.out = 1000)
+  con = f(points) >= 0
+  positives = sort(points[con])
+  negatives = sort(points[!con])
+  
+  #print(positives)
+  #print(negatives)
+  
+  if (positives[1] < negatives[1]) {
+    low = positives[1]
+    high = negatives[1]
+    con = TRUE
+  }
+  else {
+    low = negatives[1]
+    high = positives[1]
+    con = FALSE
+  }
+  
+  roots = numeric(1000)
+ 
+  i = 1
+  j = 1
+  up1 = length(positives)
+  up2 = length(negatives)
+  while(low < high) {
+    if (con) {
+      lows = positives[i:up1]
+    }
+    else {
+      lows = negatives[i:up2]
+    }
+    
+    nums = which(lows < high)
+    len = length(nums)
+    low = lows[nums[len]]
+    #print(c(low, high))
+    
+    # save each root
+    roots[j] = root(f, c(low, high))
+    j = j + 1
+    
+    low = high
+    if (nums[len] == length(lows)) 
+      high = lows[nums[len]]
+    else
+      high = lows[nums[len] + 1]
+    
+    if (con) 
+      i = which(negatives == low)
+    else 
+      i = which(positives == low)
+    
+    con = !con
+  }
+  
+  roots[1:(j - 1)]
+}
+
+allroot(f, c(0, 50))
+allroot(f, c(0, 100))
