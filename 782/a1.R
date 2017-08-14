@@ -4,9 +4,8 @@ rep(1:3 < 2, 2)
 cumsum(10^(seq(0, 8, by = 2)))
 1:4 + rep(0:3, rep(4, 4))
 
-setwd("E:/My Documents/UoA Study/assignments/782")
-csvfile = paste(getwd(), "/eurocities.csv", sep = "")
-eurocities.df = read.csv(csvfile, stringsAsFactors = FALSE)
+URL = "https://raw.githubusercontent.com/zzdxzhangzhi/assignments/adb70032ccc89e683055814da4c87727fcaf332a/782/eurocities.csv"
+eurocities.df = read.csv(URL, stringsAsFactors = FALSE)
 str(eurocities.df)
 head(eurocities.df)
 
@@ -60,6 +59,7 @@ end.df = data.frame(eurocities.df[num_end,])
 start.df
 end.df
 
+## col is the column that contain the other same cities to the 2 cities
 findcity.min = function(df, col, cityvec) {
   rows = rownames(df)
   rownum = nrow(df)
@@ -91,9 +91,8 @@ if (lst1$min < lst2$min) lst1$city else lst2$city
 hemite1 = function(xseq, n) {
   for (x in xseq) {
     res = 0
-    for (m in 1:floor(n / 2)) {
+    for (m in 0:floor(n / 2)) {
       res = res + (-1)^m / (factorial(m) * factorial(n - 2 * m)) * x^(n - 2 * m) / 2^m
-      print(res)
     }
     print(factorial(n) * res)
   }
@@ -104,7 +103,7 @@ hemite1(seq(-2, 2, by = .2), 5)
 hemite2 = function(xseq, n) {
   for (x in xseq) {
     upval = floor(n / 2)
-    mrange = 1:upval
+    mrange = 0:upval
     res = factorial(n) * sum((-1)^mrange 
                              / (factorial(mrange) * factorial(n - 2 * mrange))
                              * x^(n - 2 * mrange) / 2^mrange)
@@ -114,26 +113,52 @@ hemite2 = function(xseq, n) {
 
 hemite2(seq(-2, 2, by = .2), 5)
 
-hemite3.1 = function(x, n) {
-  m = floor(n / 2)
-  factorial(n) * ((-1)^m / (factorial(m) * factorial(n - 2 * m)) * x^(n - 2 * m) / 2^m)
+hemite3.1 = function(x, m, n) {
+  (-1)^m / (factorial(m) * factorial(n - 2 * m)) * x^(n - 2 * m) / 2^m
 }
 
-hemite3.1(seq(-2, 2, by = .2), 1)
-
-hemite3 = function(x, n) {
-  upval = floor(n / 2)
-  mrange = 1:upval
-
-  res = factorial(n) * sum((-1)^mrange 
-                           / (factorial(mrange) * factorial(n - 2 * mrange))
-                           * x^(n - 2 * mrange) / 2^mrange)
-  res
+hemite3.2 = function(x, n) {
+  factorial(n) * sum(x)
 }
 
-x = as.matrix(seq(-2, 2, by = .2))
-x
+hemite.seq = function(x, n) {
+  m = 0:floor(n / 2)
+  hemite3.3 = function(x, m) hemite3.1(x, m, n)
+  hemite3.4 = function(x) hemite3.2(x, n)
+  
+  o = outer(x, m, hemite3.3)
+  apply(o, 1, hemite3.4)
+}
+x = seq(-2, 2, by = .2)
+hemite.seq(x, 5)
 
-apply(x, 2, hemite3(x, 5))
+hemite.coef = function(n) {
+  if (n > 0) {
+    x = seq(length = n + 1, from = 1)
+    
+    # contruct the value matrix
+    A = outer(x, 0:n, "^")
+    H = hemite.seq(x, n)
+    
+    # using round when x are not intergers
+    round(solve(A, H))
+  }
+  else 1
+}
+
+hemite = function(n) {
+  coef.matrix = matrix(0, nrow = n + 1, ncol = n + 1,
+                       dimnames = list(paste("H", 0:n, sep = ""), 
+                                       paste("x^", 0:n, sep = "")))
+  for (i in 0:n) {
+    coef.matrix[i + 1,] = c(hemite.coef(i), rep(0, n - i))
+  }
+  coef.matrix
+}
+
+hemite(0)
+hemite(1)
+hemite(3)
+hemite(10)
 
 
