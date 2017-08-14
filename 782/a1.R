@@ -66,7 +66,7 @@ findcity.min = function(df, col, cityvec) {
   colnum = ncol(df)
   distances = numeric(rownum %/% 2)
   cityvec.sort = sort(cityvec)
-  for (i in 2:rownum) {
+  for (i in seq(2, rownum, by = 2)) {
     # find the row number of two distances from 1 same city
     twodt.No = rows[df[, col] == cityvec.sort[i]]
     # add the two distance from the same sity
