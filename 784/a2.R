@@ -96,7 +96,7 @@ nnet.fit = nnet(log(price) ~ bedrooms + bathrooms
                 + floors + waterfr + view + cond + grade 
                 + sqfta + sqftb + yrb + yrr + lat + long
                 + sqftlv15 + sqftlot15, 
-                data = kingCounty.df, size = 6, 
+                data = kingCounty.df, size = 8, 
                 linout = TRUE, decay = 0.001, maxit = 1000)
 
 summary(nnet.fit)
@@ -118,25 +118,6 @@ predictions = predict(nnet.fit, newdata = newKingCounty.df)
 
 actuals = log(newKingCounty.df$price)
 mean((predictions - actuals)^2)
-
-library(bootstrap)
-theta.fit = function(x, y){lsfit(x, y)}
-theta.predict = function(fit, x){cbind(1, x) %*% fit$coef}
-sq.err = function(y, yhat) {(y - yhat)^2}
-
-y = log(kingCounty.df[,3])
-x = data.matrix(kingCounty.df[,-c(1:3, 17)])
-cv10err = crossval(x, y, theta.fit, theta.predict, ngroup = 10)
-cv10 = mean((y - cv10err$cv.fit)^2)
-cv10
-
-boot = bootpred(x, y, nboot = 200, 
-                theta.fit, theta.predict, 
-                err.meas = sq.err)
-bootopt = boot[[1]] + boot[[2]]
-bootopt
-boot632 = boot[[3]]
-boot632
 
 # change to other choices of the parameter
 my.grid = expand.grid(.decay = c(0.01, 0.001), .size = c(6, 8, 10))
@@ -170,3 +151,57 @@ boot.NN = train(log(price)~ bedrooms + bathrooms
              trControl = trainControl(method = "boot", 
                                       repeats = 200))
 boot.NN
+
+library(rpart)
+CV10.rpart = train(price ~ bedrooms + bathrooms
+                   + sqftlv + sqftlot + floors 
+                   + waterfr + view + cond + grade 
+                   + sqfta + sqftb + yrb + yrr + lat + long
+                   + sqftlv15 + sqftlot15,
+                   data = kingCounty.df,
+                   method = "rpart", 
+                   tuneLength = 200,
+                   trControl = trainControl(method = "cv", 
+                                            number = 5, 
+                                            repeats = 100))
+CV10.rpart
+
+boot.rpart = train(price~ bedrooms + bathrooms
+                   + sqftlv + sqftlot + floors 
+                   + waterfr + view + cond + grade 
+                   + sqfta + sqftb + yrb + yrr + lat + long
+                   + sqftlv15 + sqftlot15,
+                   data = kingCounty.df,
+                   method = "rpart", 
+                   tuneLength = 200,
+                   trControl = trainControl(method = "boot", 
+                                            repeats = 200))
+boot.rpart
+
+tree.fit = rpart(price ~ bedrooms + bathrooms
+                 + sqftlv + sqftlot + floors 
+                 + waterfr + view + cond + grade 
+                 + sqfta + sqftb + yrb + yrr + lat + long
+                 + sqftlv15 + sqftlot15, 
+                 data = kingCounty.df,
+                 cp = 0.00019, 
+                 minsplit = 7)
+
+plotcp(tree.fit)
+abline(v = 7, lty = 2, col = "blue", lwd = 2)
+abline(v = 40, lty = 2, col = "blue", lwd = 2)
+
+printcp(tree.fit)
+
+RSS.tree = sum(residuals(tree.fit)^2)
+RSS.tree
+
+mean(residuals(tree.fit)^2)
+
+newKingCounty.df = input.df[-used,]
+rownames(newKingCounty.df) = 1:11613
+predictions = predict(tree.fit, newdata = newKingCounty.df)
+
+actuals = newKingCounty.df$price
+mean((predictions - actuals)^2)
+
