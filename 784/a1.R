@@ -47,7 +47,7 @@ kingCounty = lm(log(price)~ bedrooms + bathrooms
 			+ sqftlv15 + sqftlot15, 
 			data = kingCounty.df)
 #kingCounty = lm(log(price)~ . - id - date - zip,
-			data = kingCounty.df)
+#			data = kingCounty.df)
 
 #kingCounty = lm(log(transPrice[1:10000])~ bedrooms + bathrooms
 #			+ sqftlv + sqftlot + floors 
