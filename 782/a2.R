@@ -15,3 +15,20 @@ fib(1)
 fib(2)
 fib(3)
 fib(10)
+
+clusters.medians = function(x, c) {
+  lenx = length(x)
+  lenc = length(c)
+  d = outer(c, x, function(cj, xi) abs(xi - cj))
+  print(d)
+  d.min = which.min(d[,1:lenx])
+  print("\n")
+  print(d.min)
+  con = outer(1:lenc, d.min, function(num, minnum) num == minnum)
+  print("\n")
+  print(con)
+  median(x[con[1:lenc,]])
+}
+
+x = faithful$eruptions
+clusters.medians(x, c(2,4))
