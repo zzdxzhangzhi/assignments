@@ -1,0 +1,90 @@
+% ----------------------------------------------------------------
+% Report Class (This is a LaTeX2e document)  *********************
+% ----------------------------------------------------------------
+\documentclass[11pt]{report}
+\usepackage[english]{babel}
+\usepackage{amsmath,amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}%
+\usepackage{graphicx}%
+\usepackage{tabularx}
+\usepackage{epstopdf}
+
+\addtolength{\textheight}{3.2cm}
+\addtolength{\textwidth}{1.5cm}
+\addtolength{\marginparwidth}{-2.2cm}
+\addtolength{\oddsidemargin}{-1.2cm}
+\addtolength{\headheight}{-2.4cm}
+%\addtolength{\footskip}{-6cm}
+
+% THEOREMS -------------------------------------------------------
+\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+% ----------------------------------------------------------------
+\begin{document}
+
+%\title{STATS 782, 2017}
+\setlength\extrarowheight{3pt}
+\begin{tabular*}{\textwidth}{ @{} l @{\extracolsep\fill} c @{\extracolsep\fill} r @{}}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  \textbf{STATS 782, 2017} & \textbf{Assignment1} & \textbf{Date: 2017-08-15} \\
+   & Zhi Zhang, 708439475, zzha822 & \\
+  \hline
+\end{tabular*}
+%\author{Zhi Zhang, $\ $708439475, $\ $zzha822
+%\\The University of Auckland}
+%\date{August 3, 2017}
+%\maketitle
+
+\begin{enumerate}
+    \item[1.] The answers are below:
+    \begin{verbatim}> fib = function(n) {
++   s = numeric(n)
++   
++   if (n <= 1) s[n] = 0 
++   else {
++     s[1:(n - 1)] = fib(n - 1)
++     if (n == 2) s[n] = 1
++     else s[n] = s[n - 1] + s[n - 2]
++   }
++   
++   s
++ }
+> 
+> fib(1)
+[1] 0
+> fib(2)
+[1] 0 1
+> fib(3)
+[1] 0 1 1
+> fib(10)
+ [1]  0  1  1  2  3  5  8 13 21 34\end{verbatim} 
+ 
+    \item[2.] The answers are below:
+    \begin{enumerate}
+    	\item[(a)] \begin{verbatim}\end{verbatim}
+ 	\item[(b)] \begin{verbatim}\end{verbatim}
+ 	\item[(c)] \begin{verbatim}\end{verbatim}
+    \end{enumerate}
+    
+    \item[3.] The answers are below:
+    \begin{verbatim}\end{verbatim}
+ 	
+    \item[4.] The answers are below:
+    \begin{enumerate}
+    	\item[(a)] \begin{verbatim}\end{verbatim}
+ 	\item[(b)] \begin{verbatim}\end{verbatim}
+ 	\item[(c)] \begin{verbatim}\end{verbatim}
+    \end{enumerate}
+    
+\end{enumerate}
+
+\end{document}
+% ----------------------------------------------------------------
