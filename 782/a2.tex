@@ -69,9 +69,35 @@
  
     \item[2.] The answers are below:
     \begin{enumerate}
-    	\item[(a)] \begin{verbatim}\end{verbatim}
- 	\item[(b)] \begin{verbatim}\end{verbatim}
- 	\item[(c)] \begin{verbatim}\end{verbatim}
+    	\item[(a)] \begin{verbatim}> clusters.medians = function(x, c) {
++   lenc = length(c)
++   
++   d = outer(c, x, function(cj, xi) abs(xi - cj))
++   d.minnum = apply(d, 2, which.min)
++   
++   con = outer(1:lenc, d.minnum, function(num, minnum) num == minnum)
++   
++   xv = unlist(apply(con, 1, function(t) median(x[t])))
++   xv
++ }
+> 
+> find.clusters.medians = function(x, c) {
++   ctmp1 = c
++   repeat {
++     ctmp2 = clusters.medians(x, ctmp1)
++     if (all(abs(ctmp1 - ctmp2) < 1e-07)) break
++     else ctmp1 = ctmp2
++   }
++   ctmp1
++ }
+> 
+> x = faithful$eruptions
+> find.clusters.medians(x, c(2,4))
+[1] 1.9830 4.3415\end{verbatim}
+ 	\item[(b)] \begin{verbatim}> find.clusters.medians(x, c(2,3,4))
+[1] 1.9830 3.9665 4.5330\end{verbatim}
+ 	\item[(c)] \begin{verbatim}> find.clusters.medians(x, c(2,3,4,5))
+[1] 1.967 3.600 4.150 4.600\end{verbatim}
     \end{enumerate}
     
     \item[3.] The answers are below:
