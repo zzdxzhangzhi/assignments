@@ -46,3 +46,25 @@ find.clusters.medians(x, c(2,3,4,5))
 x = 8 * runif(207)
 find.clusters.medians(x, c(2,3,4,5,6))
 find.clusters.medians(x, c(2,3,4,5,6,7))
+
+sign.matrix = function(x) outer(x, x, function(x1, x2) sign(x1 - x2))
+
+conc = function(x, y) {
+  conc.mtx = sign.matrix(x)
+  conc.mty = sign.matrix(y)
+  conc.z = conc.mtx + conc.mty
+  c = length(which(conc.z < 0 | conc.z > 0))
+  n = length(x)
+  c / (n * (n - 1)) 
+}
+
+conc(x = 1:5, y = c(3, 1, 4, 5, 2))
+
+set.seed(782)
+x = round(rnorm(1000))
+y = x + round(rnorm(1000))
+conc(x, y)
+
+
+
+
