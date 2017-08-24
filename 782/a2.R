@@ -15,6 +15,7 @@ fib(1)
 fib(2)
 fib(3)
 fib(10)
+fib(50)
 
 clusters.medians = function(x, c) {
   lenc = length(c)
@@ -65,6 +66,17 @@ x = round(rnorm(1000))
 y = x + round(rnorm(1000))
 conc(x, y)
 
+nba.df = read.csv("https://raw.githubusercontent.com/zzdxzhangzhi/assignments/master/782/NBA2016-2017.csv",
+stringsAsFactors = FALSE)
+names(nba.df) = c("team1", "team2", "wins")
+nba.df
+
+
+
+likelihood.r = function(r, times) {
+  rankv = c(outer(r, r, function(ri, rj) ri / (ri + rj)))
+  prod(rankv)
+}
 
 
 
