@@ -74,9 +74,11 @@ nba.df
 
 
 likelihood.r = function(r, times) {
-  rankv = c(outer(r, r, function(ri, rj) ri / (ri + rj)))
-  prod(rankv)
+  rankv = c(outer(r, r, function(ri, rj) ri / (ri + rj))) ^ times
+  log(prod(rankv))
 }
+
+optim(r, likelihood.r, method = "BFGS")
 
 
 
