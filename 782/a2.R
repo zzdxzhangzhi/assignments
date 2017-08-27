@@ -69,16 +69,56 @@ conc(x, y)
 nba.df = read.csv("https://raw.githubusercontent.com/zzdxzhangzhi/assignments/master/782/NBA2016-2017.csv",
 stringsAsFactors = FALSE)
 names(nba.df) = c("team1", "team2", "wins")
-nba.df
+head(nba.df)
 
 
 
 likelihood.r = function(r, times) {
-  rankv = c(outer(r, r, function(ri, rj) ri / (ri + rj))) ^ times
+  mtx = outer(r, r, function(ri, rj) ri / (ri + rj))
+  rankv = c(mtx[which(row(mtx) != col(mtx))]) ^ times
   log(prod(rankv))
 }
 
-optim(r, likelihood.r, method = "BFGS")
+log.likelihood.r = function(r, times, s) {
+  rn = s - sum(r)
+  rr = c(r, rn)
+  
+  if (all(rr > 0)) {
+    mtx = outer(rr, rr, function(ri, rj) ri / (ri + rj))
+    rankv = log(c(mtx[which(row(mtx) != col(mtx))]))
+    sum(times * rankv)
+  } else {
+    -Inf
+  }
+}
+
+s = 1000
+Q = function(r) {
+  -log.likelihood.r(r, nba.df$wins, s)
+}
+
+result = optim(rep(33, 29), Q, method = "BFGS")
+result
+
+ratio = 100 / result$par[which.max(result$par)]
+r.value = result$par * ratio
+rr.value = c (r.value, (s - sum(result$par)) * ratio)
+rr.value
+
+nba.names = nba.df$team1[seq(1, 870, length = 30)]
+nba.names
+
+rank.table = cbind(data.frame(nba.names), rr.value, stringsAsFactors = FALSE)
+ordered.rank = rank.table[order(rank.table$rr.value, decreasing = TRUE),]
+colnames(ordered.rank) = c("name", "rank")
+rownames(ordered.rank) = 1:30
+ordered.rank
+
+
+
+
+
+
 
 
 
