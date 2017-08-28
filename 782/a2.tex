@@ -268,6 +268,22 @@ NULL
 +         ylab = paste("rank of", nba.names[first2[2]]))
 > \end{verbatim}
     \includegraphics[width=\textwidth]{a2_contour.eps}
+    \begin{verbatim}> r1 = seq(85, 100, length = 1001)
+> r2 = seq(45, 75, length = 4)
+> z = outer(r1, r2, Q2)
+> par(mfrow = c(2, 2))
+> ran = range(z)
+> for(j in 1:length(r2)) {
++   plot(r1, z[, j], ylim = ran, type = "l",
++        main = paste("rank of", 
++                     nba.names[first2[2]], 
++                     "=", 
++                     r2[j]),
++        xlab = paste("rank of", nba.names[first2[1]]),
++        ylab = "Q")
++ }
+> \end{verbatim}
+   \includegraphics[width=\textwidth]{a2_profile.eps}
     \end{enumerate}
 
 \end{enumerate}

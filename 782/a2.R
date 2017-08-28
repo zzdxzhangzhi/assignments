@@ -119,15 +119,18 @@ log.likelihood.r.deriv = function(r, times1, times2, s) {
   
   if (all(rr > 0)) {
     mtx1 = outer(rr, rr, function(ri, rj) rj / ri * (ri + rj))
-    mtx2 = outer(rr, rr, function(ri, rj) (rj + ri) / ri ^ 2)
+    mtx2 = outer(rr, rr, function(rj, ri) 1 / (ri + rj))
     deriv1 = matrix(c(mtx1[which(row(mtx1) != col(mtx1))]) * times1, nrow = length(rr))
     deriv2 = matrix(c(mtx2[which(row(mtx2) != col(mtx2))]) * times2, nrow = length(rr))
+    print(deriv1)
+    print(deriv2)
     
-    deriv.mt = deriv1 - deriv2
-    deriv.val = apply(deriv.mt, 1, sum)
+    #deriv.mt = deriv1 - deriv2
+    deriv.val = apply(deriv1, 1, sum) - apply(deriv2, 1, sum)
+    print(deriv.val)
     deriv.val[1:length(r)]
   } else {
-    0
+    -Inf
   }
 }
 
@@ -174,8 +177,20 @@ contour(r1, r2, z,
         xlab = paste("rank of", nba.names[first2[1]]),
         ylab = paste("rank of", nba.names[first2[2]]))
 
-
-
+r1 = seq(85, 100, length = 1001)
+r2 = seq(45, 75, length = 4)
+z = outer(r1, r2, Q2)
+par(mfrow = c(2, 2))
+ran = range(z)
+for(j in 1:length(r2)) {
+  plot(r1, z[, j], ylim = ran, type = "l",
+       main = paste("rank of", 
+                    nba.names[first2[2]], 
+                    "=", 
+                    r2[j]),
+       xlab = paste("rank of", nba.names[first2[1]]),
+       ylab = "Q")
+}
 
 
 
