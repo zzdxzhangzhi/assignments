@@ -71,7 +71,8 @@ stringsAsFactors = FALSE)
 names(nba.df) = c("team1", "team2", "wins")
 head(nba.df)
 
-
+nba.names = nba.df$team1[seq(1, 870, length = 30)]
+nba.names
 
 likelihood.r = function(r, times) {
   mtx = outer(r, r, function(ri, rj) ri / (ri + rj))
@@ -97,7 +98,8 @@ Q = function(r) {
   -log.likelihood.r(r, nba.df$wins, s)
 }
 
-result = optim(rep(33, 29), Q, method = "BFGS")
+count = length(nba.names)
+result = optim(rep(33, count - 1), Q, method = "BFGS")
 result
 
 ratio = 100 / result$par[which.max(result$par)]
@@ -105,17 +107,72 @@ r.value = result$par * ratio
 rr.value = c (r.value, (s - sum(result$par)) * ratio)
 rr.value
 
-nba.names = nba.df$team1[seq(1, 870, length = 30)]
-nba.names
-
 rank.table = cbind(data.frame(nba.names), rr.value, stringsAsFactors = FALSE)
 ordered.rank = rank.table[order(rank.table$rr.value, decreasing = TRUE),]
 colnames(ordered.rank) = c("name", "rank")
 rownames(ordered.rank) = 1:30
 ordered.rank
 
+log.likelihood.r.deriv = function(r, times1, times2, s) {
+  rn = s - sum(r)
+  rr = c(r, rn)
+  
+  if (all(rr > 0)) {
+    mtx1 = outer(rr, rr, function(ri, rj) rj / ri * (ri + rj))
+    mtx2 = outer(rr, rr, function(ri, rj) (rj + ri) / ri ^ 2)
+    deriv1 = matrix(c(mtx1[which(row(mtx1) != col(mtx1))]) * times1, nrow = length(rr))
+    deriv2 = matrix(c(mtx2[which(row(mtx2) != col(mtx2))]) * times2, nrow = length(rr))
+    
+    deriv.mt = deriv1 - deriv2
+    deriv.val = apply(deriv.mt, 1, sum)
+    deriv.val[1:length(r)]
+  } else {
+    0
+  }
+}
 
+Q.deriv = function(r) {
+  order.team2 = order(nba.df$team2)
+  wins.team2 = nba.df$wins[order.team2]
+  log.likelihood.r.deriv(r, nba.df$wins, wins.team2, s)
+}
 
+result = optim(rep(33, count - 1), Q, gr = Q.deriv, method = "BFGS")
+result
+
+ranks = c(result$par, s - sum(result$par))
+ranks.sort = sort(ranks, decreasing = TRUE)
+#ranks
+#ranks.sort
+first2 = which(ranks == ranks.sort[1:2])
+
+#fixed.val = ranks.sort[c(-1, -2)]
+#fixed.val
+#fixed.val = ranks[-first2]
+#fixed.val
+
+Q2 = function(r1, r2) {
+  m = max(length(r1), length(r2))
+  if (length(r1) < m)
+    r1 = rep(r1, length = m)
+  if (length(r2) < m)
+    r2 = rep(r1, length = m)
+  
+  ans = numeric(m)
+  for (i in 1:m) {
+    ranks[first2] = c(r1[i], r2[i])
+    ans[i] = -log.likelihood.r(ranks[-length(ranks)], nba.df$wins, s)
+  }
+  
+  ans
+}
+
+r1 = seq(40, 100, length = 61)
+r2 = seq(20, 80, length = 61)
+z = outer(r1, r2, Q2)
+contour(r1, r2, z,
+        xlab = paste("rank of", nba.names[first2[1]]),
+        ylab = paste("rank of", nba.names[first2[2]]))
 
 
 

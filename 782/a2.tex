@@ -123,10 +123,37 @@
  	
     \item[4.] The answers are below:
     \begin{enumerate}
-    	\item[(a)] \begin{verbatim}> log.likelihood.r = function(r, times, s) {
+    	\item[(a)] \begin{verbatim}> nba.df = read.csv("https://raw.githubusercontent.com/zzdxzhangzhi/assignments/master/782/NBA2016-2017.csv",
++ stringsAsFactors = FALSE)
+> names(nba.df) = c("team1", "team2", "wins")
+> head(nba.df)
+          team1               team2 wins
+1 Atlanta Hawks      Boston Celtics    2
+2 Atlanta Hawks       Brooklyn Nets    2
+3 Atlanta Hawks   Charlotte Hornets    1
+4 Atlanta Hawks       Chicago Bulls    3
+5 Atlanta Hawks Cleveland Cavaliers    3
+6 Atlanta Hawks    Dallas Mavericks    2
+> 
+> nba.names = nba.df$team1[seq(1, 870, length = 30)]
+> nba.names
+ [1] "Atlanta Hawks"          "Boston Celtics"         "Brooklyn Nets"          
+"Charlotte Hornets"      "Chicago Bulls"         
+ [6] "Cleveland Cavaliers"    "Dallas Mavericks"       "Denver Nuggets"         
+"Detroit Pistons"        "Golden State Warriors" 
+[11] "Houston Rockets"        "Indiana Pacers"         "Los Angeles Clippers"   
+"Los Angeles Lakers"     "Memphis Grizzlies"     
+[16] "Miami Heat"             "Milwaukee Bucks"        "Minnesota Timberwolves" 
+"New Orleans Pelicans"   "New York Knicks"       
+[21] "Oklahoma City Thunder"  "Orlando Magic"          "Philadelphia 76ers"     
+"Phoenix Suns"           "Portland Trail Blazers"
+[26] "Sacramento Kings"       "San Antonio Spurs"      "Toronto Raptors"        
+"Utah Jazz"              "Washington Wizards"    
+> 
+> log.likelihood.r = function(r, times, s) {
 +   rn = s - sum(r)
 +   rr = c(r, rn)
-+
++   
 +   if (all(rr > 0)) {
 +     mtx = outer(rr, rr, function(ri, rj) ri / (ri + rj))
 +     rankv = log(c(mtx[which(row(mtx) != col(mtx))]))
@@ -135,28 +162,28 @@
 +     -Inf
 +   }
 + }
->
+> 
 > s = 1000
 > Q = function(r) {
 +   -log.likelihood.r(r, nba.df$wins, s)
 + }
->
-> result = optim(rep(33, 29), Q, method = "BFGS")
+> 
+> count = length(nba.names)
+> result = optim(rep(33, count - 1), Q, method = "BFGS")
 > result
 $par
- [1] 26.967630 15.823522 91.534764 37.369244 29.370856 17.323249 41.610028 
- 29.444655 35.470375  6.070289
-[11] 13.160359 28.443720 16.300844 61.231229 24.235718 28.915184 27.769763 
-45.295384 39.273467 48.952031
-[21] 20.023588 54.466951 57.834409 68.682310 27.749761 43.350332  9.272344 
-17.788711 16.557164
+ [1] 26.967630 15.823522 91.534764 37.369244 29.370856 17.323249 
+41.610028 29.444655 35.470375  6.070289 13.160359 28.443720
+[13] 16.300844 61.231229 24.235718 28.915184 27.769763 45.295384 
+39.273467 48.952031 20.023588 54.466951 57.834409 68.682310
+[25] 27.749761 43.350332  9.272344 17.788711 16.557164
 
 $value
 [1] 761.4918
 
 $counts
-function gradient
-     102       95
+function gradient 
+     102       95 
 
 $convergence
 [1] 0
@@ -164,37 +191,18 @@ $convergence
 $message
 NULL
 
->
+> 
 > ratio = 100 / result$par[which.max(result$par)]
 > r.value = result$par * ratio
 > rr.value = c (r.value, (s - sum(result$par)) * ratio)
 > rr.value
  [1]  29.461626  17.286899 100.000000  40.825193  32.087105  18.925323  
- 45.458169  32.167729  38.750715
-[10]   6.631676  14.377443  31.074227  17.808365  66.893961  26.477064  
-31.589292  30.337942  49.484352
-[19]  42.905520  53.479169  21.875391  59.504115  63.182999  75.034126  
-30.316089  47.359419  10.129861
-[28]  19.433831  18.088389  21.535119
->
-> nba.names = nba.df$team1[seq(1, 870, length = 30)]
-> nba.names
- [1] "Atlanta Hawks"          "Boston Celtics"         "Brooklyn Nets"          
- "Charlotte Hornets"
- [5] "Chicago Bulls"          "Cleveland Cavaliers"    "Dallas Mavericks"       
- "Denver Nuggets"
- [9] "Detroit Pistons"        "Golden State Warriors"  "Houston Rockets"        
- "Indiana Pacers"
-[13] "Los Angeles Clippers"   "Los Angeles Lakers"     "Memphis Grizzlies"      
-"Miami Heat"
-[17] "Milwaukee Bucks"        "Minnesota Timberwolves" "New Orleans Pelicans"   
-"New York Knicks"
-[21] "Oklahoma City Thunder"  "Orlando Magic"          "Philadelphia 76ers"     
-"Phoenix Suns"
-[25] "Portland Trail Blazers" "Sacramento Kings"       "San Antonio Spurs"      
-"Toronto Raptors"
-[29] "Utah Jazz"              "Washington Wizards"
->
+45.458169  32.167729  38.750715   6.631676  14.377443
+[12]  31.074227  17.808365  66.893961  26.477064  31.589292  30.337942  
+49.484352  42.905520  53.479169  21.875391  59.504115
+[23]  63.182999  75.034126  30.316089  47.359419  10.129861  19.433831  
+18.088389  21.535119
+> 
 > rank.table = cbind(data.frame(nba.names), rr.value, stringsAsFactors = FALSE)
 > ordered.rank = rank.table[order(rank.table$rr.value, decreasing = TRUE),]
 > colnames(ordered.rank) = c("name", "rank")
@@ -231,9 +239,35 @@ NULL
 28        Houston Rockets  14.377443
 29      San Antonio Spurs  10.129861
 30  Golden State Warriors   6.631676
-> \end{verbatim}
+>  \end{verbatim}
  	    \item[(b)] \begin{verbatim}\end{verbatim}
- 	    \item[(c)] \begin{verbatim}\end{verbatim}
+ 	    \item[(c)] \begin{verbatim}> ranks = c(result$par, s - sum(result$par))
+> ranks.sort = sort(ranks, decreasing = TRUE)
+> first2 = which(ranks == ranks.sort[1:2])
+> Q2 = function(r1, r2) {
++   m = max(length(r1), length(r2))
++   if (length(r1) < m)
++     r1 = rep(r1, length = m)
++   if (length(r2) < m)
++     r2 = rep(r1, length = m)
++   
++   ans = numeric(m)
++   for (i in 1:m) {
++     ranks[first2] = c(r1[i], r2[i])
++     ans[i] = -log.likelihood.r(ranks[-length(ranks)], nba.df$wins, s)
++   }
++   
++   ans
++ }
+> 
+> r1 = seq(50, 100, length = 61)
+> r2 = seq(20, 70, length = 61)
+> z = outer(r1, r2, Q2)
+> contour(r1, r2, z,
++         xlab = paste("rank of", nba.names[first2[1]]),
++         ylab = paste("rank of", nba.names[first2[2]]))
+> \end{verbatim}
+    \includegraphics[width=\textwidth]{a2_contour.eps}
     \end{enumerate}
 
 \end{enumerate}
