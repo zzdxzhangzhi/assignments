@@ -122,18 +122,10 @@ log.likelihood.r.deriv = function(r, i, times1, times2) {
     mtx2 = outer(r[i], r[-i], function(ri, rj) 1 / (ri + rj))
     deriv1 = c(t(mtx1), 1 / r[i]) * times1[(rlen * (i - 1) + 1) : (rlen * i)]
     deriv2 = c(t(mtx2), 1 / (s - sum(r))) * times2[(rlen * (i - 1) + 1) : (rlen * i)]
-    #mt1 = outer(r, r, function(ri, rj) rj / ri * (ri + rj))
-    #mt2 = outer(r, r, function(ri, rj) 1 / (ri + rj))
-    #print(deriv1)
-    #print(deriv2)
     
-    #deriv.mt = deriv1 - deriv2
-    deriv.val = sum(deriv1) - sum(deriv2)
-    #deriv.val = apply(deriv1, 1, sum)
-    #print(deriv.val)
-    deriv.val
+    sum(deriv1) - sum(deriv2)
   } else {
-    0
+    -Inf
   }
 }
 
@@ -149,7 +141,8 @@ Q.derivs = function(r) {
   gradients
 }
 
-result.deriv = optim(seq(1, 29, length = 29), Q, gr = Q.derivs, method = "BFGS")
+result.deriv = optim(seq(1, 29, length = 29), Q, gr = Q.derivs, 
+                     method = "BFGS")
 result.deriv
 
 ranks = c(result$par, s - sum(result$par))

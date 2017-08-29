@@ -247,7 +247,54 @@ NULL
 29           Phoenix Suns   8.870722
 30          Brooklyn Nets   6.638514
 >  \end{verbatim}
- 	    \item[(b)] \begin{verbatim}\end{verbatim}
+ 	    \item[(b)] \begin{verbatim}> log.likelihood.r.deriv = function(r, i, times1, times2) {
++   rlen = length(r)
++   
++   if (all(r > 0)) {
++     mtx1 = outer(r[i], r[-i], function(ri, rj) rj / ri * (ri + rj))
++     mtx2 = outer(r[i], r[-i], function(ri, rj) 1 / (ri + rj))
++     deriv1 = c(t(mtx1), 1 / r[i]) * times1[(rlen * (i - 1) + 1) : (rlen * i)]
++     deriv2 = c(t(mtx2), 1 / (s - sum(r))) * times2[(rlen * (i - 1) + 1) : (rlen * i)]
++     
++     deriv.val = sum(deriv1) - sum(deriv2)
++     deriv.val
++   } else {
++     -Inf
++   }
++ }
+> 
+> Q.derivs = function(r) {
++   order.team2 = order(nba.df$team2)
++   wins.team2 = nba.df$wins[order.team2]
++   rlen = length(r)
++   gradients = numeric(rlen)
++   for (i in 1:rlen) {
++     gradients[i] = log.likelihood.r.deriv(r, i, nba.df$wins, wins.team2)
++   }
++   
++   gradients
++ }
+> 
+> result.deriv = optim(seq(1, 29, length = 29), Q, gr = Q.derivs, 
++                      method = "BFGS")
+> result.deriv
+$par
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29
+
+$value
+[1] 1109.275
+
+$counts
+function gradient 
+      29        1 
+
+$convergence
+[1] 0
+
+$message
+NULL
+
+> \end{verbatim}
  	    \item[(c)] \begin{verbatim}> ranks = c(result$par, s - sum(result$par))
 > ranks.sort = sort(ranks, decreasing = TRUE)
 > first2 = c(which(round(ranks) == round(ranks.sort[1])), 
