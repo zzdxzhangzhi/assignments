@@ -253,11 +253,12 @@ NULL
 +   if (all(r > 0)) {
 +     mtx1 = outer(r[i], r[-i], function(ri, rj) rj / ri * (ri + rj))
 +     mtx2 = outer(r[i], r[-i], function(ri, rj) 1 / (ri + rj))
-+     deriv1 = c(t(mtx1), 1 / r[i]) * times1[(rlen * (i - 1) + 1) : (rlen * i)]
-+     deriv2 = c(t(mtx2), 1 / (s - sum(r))) * times2[(rlen * (i - 1) + 1) : (rlen * i)]
++     deriv1 = c(t(mtx1), 
++                1 / r[i]) * times1[(rlen * (i - 1) + 1) : (rlen * i)]
++     deriv2 = c(t(mtx2), 
++                1 / (s - sum(r))) * times2[(rlen * (i - 1) + 1) : (rlen * i)]
 +     
-+     deriv.val = sum(deriv1) - sum(deriv2)
-+     deriv.val
++     sum(deriv1) - sum(deriv2)
 +   } else {
 +     -Inf
 +   }
@@ -279,7 +280,8 @@ NULL
 +                      method = "BFGS")
 > result.deriv
 $par
- [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 
+20 21 22 23 24 25 26 27 28 29
 
 $value
 [1] 1109.275
