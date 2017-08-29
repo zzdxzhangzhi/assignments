@@ -11,9 +11,9 @@
 \usepackage{epstopdf}
 
 \addtolength{\textheight}{3.2cm}
-\addtolength{\textwidth}{1.5cm}
+\addtolength{\textwidth}{2cm}
 \addtolength{\marginparwidth}{-2.2cm}
-\addtolength{\oddsidemargin}{-1.2cm}
+\addtolength{\oddsidemargin}{-1.4cm}
 \addtolength{\headheight}{-2.4cm}
 %\addtolength{\footskip}{-6cm}
 
@@ -123,7 +123,8 @@
  	
     \item[4.] The answers are below:
     \begin{enumerate}
-    	\item[(a)] \begin{verbatim}> nba.df = read.csv("https://raw.githubusercontent.com/zzdxzhangzhi/assignments/master/782/NBA2016-2017.csv",
+    	\item[(a)] \begin{verbatim}> nba.df = read.csv("https://raw.githubusercontent.com/
+zzdxzhangzhi/assignments/master/782/NBA2016-2017.csv",
 + stringsAsFactors = FALSE)
 > names(nba.df) = c("team1", "team2", "wins")
 > head(nba.df)
@@ -137,26 +138,28 @@
 > 
 > nba.names = nba.df$team1[seq(1, 870, length = 30)]
 > nba.names
- [1] "Atlanta Hawks"          "Boston Celtics"         "Brooklyn Nets"          
-"Charlotte Hornets"      "Chicago Bulls"         
- [6] "Cleveland Cavaliers"    "Dallas Mavericks"       "Denver Nuggets"         
-"Detroit Pistons"        "Golden State Warriors" 
-[11] "Houston Rockets"        "Indiana Pacers"         "Los Angeles Clippers"   
-"Los Angeles Lakers"     "Memphis Grizzlies"     
-[16] "Miami Heat"             "Milwaukee Bucks"        "Minnesota Timberwolves" 
-"New Orleans Pelicans"   "New York Knicks"       
-[21] "Oklahoma City Thunder"  "Orlando Magic"          "Philadelphia 76ers"     
-"Phoenix Suns"           "Portland Trail Blazers"
-[26] "Sacramento Kings"       "San Antonio Spurs"      "Toronto Raptors"        
-"Utah Jazz"              "Washington Wizards"    
-> 
+ [1] "Atlanta Hawks"          "Boston Celtics"         "Brooklyn Nets"
+          "Charlotte Hornets"     
+ [5] "Chicago Bulls"          "Cleveland Cavaliers"    "Dallas Mavericks"
+       "Denver Nuggets"        
+ [9] "Detroit Pistons"        "Golden State Warriors"  "Houston Rockets"
+        "Indiana Pacers"        
+[13] "Los Angeles Clippers"   "Los Angeles Lakers"     "Memphis Grizzlies"
+      "Miami Heat"            
+[17] "Milwaukee Bucks"        "Minnesota Timberwolves" "New Orleans Pelicans"
+   "New York Knicks"       
+[21] "Oklahoma City Thunder"  "Orlando Magic"          "Philadelphia 76ers"
+     "Phoenix Suns"          
+[25] "Portland Trail Blazers" "Sacramento Kings"       "San Antonio Spurs"
+      "Toronto Raptors"       
+[29] "Utah Jazz"              "Washington Wizards"    
 > log.likelihood.r = function(r, times, s) {
 +   rn = s - sum(r)
 +   rr = c(r, rn)
 +   
 +   if (all(rr > 0)) {
-+     mtx = outer(rr, rr, function(ri, rj) ri / (ri + rj))
-+     rankv = log(c(mtx[which(row(mtx) != col(mtx))]))
++     mtx = outer(rr, rr, function(ri, rj) log(ri / (ri + rj)))
++     rankv = c(t(mtx)[which(row(mtx) != col(mtx))])
 +     sum(times * rankv)
 +   } else {
 +     -Inf
@@ -169,21 +172,24 @@
 + }
 > 
 > count = length(nba.names)
-> result = optim(rep(33, count - 1), Q, method = "BFGS")
+> result = optim(seq(1, 29, length = 29), Q, method = "BFGS", 
++                control = list(maxit = 200))
 > result
 $par
- [1] 26.967630 15.823522 91.534764 37.369244 29.370856 17.323249 
-41.610028 29.444655 35.470375  6.070289 13.160359 28.443720
-[13] 16.300844 61.231229 24.235718 28.915184 27.769763 45.295384 
-39.273467 48.952031 20.023588 54.466951 57.834409 68.682310
-[25] 27.749761 43.350332  9.272344 17.788711 16.557164
+ [1]  28.920344  49.262769   8.487427  20.865839  26.562360  
+45.009903  18.735556  26.484090  21.994617
+[10] 127.851303  59.221865  27.412854  47.775175  12.710449  
+32.153364  26.968452  28.090105  17.226476
+[19]  19.848702  15.942769  38.873109  14.320608  13.473253  
+11.341333  28.116503  17.982849  83.968346
+[28]  43.789158  47.019261
 
 $value
-[1] 761.4918
+[1] 761.4917
 
 $counts
 function gradient 
-     102       95 
+     147      143 
 
 $convergence
 [1] 0
@@ -196,54 +202,59 @@ NULL
 > r.value = result$par * ratio
 > rr.value = c (r.value, (s - sum(result$par)) * ratio)
 > rr.value
- [1]  29.461626  17.286899 100.000000  40.825193  32.087105  18.925323  
-45.458169  32.167729  38.750715   6.631676  14.377443
-[12]  31.074227  17.808365  66.893961  26.477064  31.589292  30.337942  
-49.484352  42.905520  53.479169  21.875391  59.504115
-[23]  63.182999  75.034126  30.316089  47.359419  10.129861  19.433831  
-18.088389  21.535119
+ [1]  22.620297  38.531300   6.638514  16.320396  20.775979  
+35.204884  14.654177  20.714760  17.203279
+[10] 100.000000  46.320893  21.441200  37.367766   9.941587  
+25.149031  21.093608  21.970918  13.473837
+[19]  15.524833  12.469774  30.404938  11.200987  10.538221   
+8.870722  21.991566  14.065441  65.676566
+[28]  34.250068  36.776521  30.966569
 > 
-> rank.table = cbind(data.frame(nba.names), rr.value, stringsAsFactors = FALSE)
+> rank.table = data.frame(nba.names, rr.value, stringsAsFactors = FALSE)
 > ordered.rank = rank.table[order(rank.table$rr.value, decreasing = TRUE),]
 > colnames(ordered.rank) = c("name", "rank")
 > rownames(ordered.rank) = 1:30
 > ordered.rank
                      name       rank
-1           Brooklyn Nets 100.000000
-2            Phoenix Suns  75.034126
-3      Los Angeles Lakers  66.893961
-4      Philadelphia 76ers  63.182999
-5           Orlando Magic  59.504115
-6         New York Knicks  53.479169
-7  Minnesota Timberwolves  49.484352
-8        Sacramento Kings  47.359419
-9        Dallas Mavericks  45.458169
-10   New Orleans Pelicans  42.905520
-11      Charlotte Hornets  40.825193
-12        Detroit Pistons  38.750715
-13         Denver Nuggets  32.167729
-14          Chicago Bulls  32.087105
-15             Miami Heat  31.589292
-16         Indiana Pacers  31.074227
-17        Milwaukee Bucks  30.337942
-18 Portland Trail Blazers  30.316089
-19          Atlanta Hawks  29.461626
-20      Memphis Grizzlies  26.477064
-21  Oklahoma City Thunder  21.875391
-22     Washington Wizards  21.535119
-23        Toronto Raptors  19.433831
-24    Cleveland Cavaliers  18.925323
-25              Utah Jazz  18.088389
-26   Los Angeles Clippers  17.808365
-27         Boston Celtics  17.286899
-28        Houston Rockets  14.377443
-29      San Antonio Spurs  10.129861
-30  Golden State Warriors   6.631676
+1   Golden State Warriors 100.000000
+2       San Antonio Spurs  65.676566
+3         Houston Rockets  46.320893
+4          Boston Celtics  38.531300
+5    Los Angeles Clippers  37.367766
+6               Utah Jazz  36.776521
+7     Cleveland Cavaliers  35.204884
+8         Toronto Raptors  34.250068
+9      Washington Wizards  30.966569
+10  Oklahoma City Thunder  30.404938
+11      Memphis Grizzlies  25.149031
+12          Atlanta Hawks  22.620297
+13 Portland Trail Blazers  21.991566
+14        Milwaukee Bucks  21.970918
+15         Indiana Pacers  21.441200
+16             Miami Heat  21.093608
+17          Chicago Bulls  20.775979
+18         Denver Nuggets  20.714760
+19        Detroit Pistons  17.203279
+20      Charlotte Hornets  16.320396
+21   New Orleans Pelicans  15.524833
+22       Dallas Mavericks  14.654177
+23       Sacramento Kings  14.065441
+24 Minnesota Timberwolves  13.473837
+25        New York Knicks  12.469774
+26          Orlando Magic  11.200987
+27     Philadelphia 76ers  10.538221
+28     Los Angeles Lakers   9.941587
+29           Phoenix Suns   8.870722
+30          Brooklyn Nets   6.638514
 >  \end{verbatim}
  	    \item[(b)] \begin{verbatim}\end{verbatim}
  	    \item[(c)] \begin{verbatim}> ranks = c(result$par, s - sum(result$par))
 > ranks.sort = sort(ranks, decreasing = TRUE)
-> first2 = which(ranks == ranks.sort[1:2])
+> first2 = c(which(round(ranks) == round(ranks.sort[1])), 
++            which(round(ranks) == round(ranks.sort[2])))
+> first2
+[1] 10 27
+> 
 > Q2 = function(r1, r2) {
 +   m = max(length(r1), length(r2))
 +   if (length(r1) < m)
@@ -260,18 +271,18 @@ NULL
 +   ans
 + }
 > 
-> r1 = seq(50, 100, length = 61)
-> r2 = seq(20, 70, length = 61)
+> r1 = seq(40, 145, length = 61)
+> r2 = seq(20, 100, length = 61)
 > z = outer(r1, r2, Q2)
 > contour(r1, r2, z,
 +         xlab = paste("rank of", nba.names[first2[1]]),
 +         ylab = paste("rank of", nba.names[first2[2]]))
 > \end{verbatim}
     \includegraphics[width=\textwidth]{a2_contour.eps}
-    \begin{verbatim}> r1 = seq(85, 100, length = 1001)
-> r2 = seq(45, 75, length = 4)
+    \begin{verbatim}> r1 = seq(40, 145, length = 1001)
+> r2 = seq(20, 100, length = 6)
 > z = outer(r1, r2, Q2)
-> par(mfrow = c(2, 2))
+> par(mfrow = c(2, 3))
 > ran = range(z)
 > for(j in 1:length(r2)) {
 +   plot(r1, z[, j], ylim = ran, type = "l",
