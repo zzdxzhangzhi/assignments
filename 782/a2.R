@@ -120,8 +120,10 @@ log.likelihood.r.deriv = function(r, i, times1, times2) {
   if (all(r > 0)) {
     mtx1 = outer(r[i], r[-i], function(ri, rj) rj / ri * (ri + rj))
     mtx2 = outer(r[i], r[-i], function(ri, rj) 1 / (ri + rj))
-    deriv1 = c(t(mtx1), 1 / r[i]) * times1[(rlen * (i - 1) + 1) : (rlen * i)]
-    deriv2 = c(t(mtx2), 1 / (s - sum(r))) * times2[(rlen * (i - 1) + 1) : (rlen * i)]
+    deriv1 = c(t(mtx1), 
+               1 / r[i]) * times1[(rlen * (i - 1) + 1) : (rlen * i)]
+    deriv2 = c(t(mtx2), 
+               1 / (s - sum(r))) * times2[(rlen * (i - 1) + 1) : (rlen * i)]
     
     sum(deriv1) - sum(deriv2)
   } else {
