@@ -114,21 +114,21 @@ colnames(ordered.rank) = c("name", "rank")
 rownames(ordered.rank) = 1:30
 ordered.rank
 
-log.likelihood.r.deriv = function(r, i, times1, times2, s) {
+log.likelihood.r.deriv = function(r, i, times1, times2) {
   rlen = length(r)
-  rn = s - sum(r)
-  rr = c(r, rn)
   
-  if (all(rr > 0)) {
-    mtx1 = outer(rr[i], rr[-i], function(ri, rj) rj / ri * (ri + rj))
-    mtx2 = outer(rr[i], rr[-i], function(ri, rj) 1 / (ri + rj))
-    deriv1 = c(mtx1) * times1[(rlen * (i - 1) + 1) : (rlen * i)]
-    deriv2 = c(mtx2) * times2[(rlen * (i - 1) + 1) : (rlen * i)]
+  if (all(r > 0)) {
+    mtx1 = outer(r[i], r[-i], function(ri, rj) rj / ri * (ri + rj))
+    mtx2 = outer(r[i], r[-i], function(ri, rj) 1 / (ri + rj))
+    deriv1 = c(t(mtx1), 1 / r[i]) * times1[(rlen * (i - 1) + 1) : (rlen * i)]
+    deriv2 = c(t(mtx2), 1 / (s - sum(r))) * times2[(rlen * (i - 1) + 1) : (rlen * i)]
+    #mt1 = outer(r, r, function(ri, rj) rj / ri * (ri + rj))
+    #mt2 = outer(r, r, function(ri, rj) 1 / (ri + rj))
     #print(deriv1)
     #print(deriv2)
     
     #deriv.mt = deriv1 - deriv2
-    deriv.val = sum(deriv1) - sum(deriv2) + 1 / r[i]
+    deriv.val = sum(deriv1) - sum(deriv2)
     #deriv.val = apply(deriv1, 1, sum)
     #print(deriv.val)
     deriv.val
@@ -143,13 +143,13 @@ Q.derivs = function(r) {
   rlen = length(r)
   gradients = numeric(rlen)
   for (i in 1:rlen) {
-    gradients[i] = log.likelihood.r.deriv(r, i, nba.df$wins, wins.team2, s)
+    gradients[i] = log.likelihood.r.deriv(r, i, nba.df$wins, wins.team2)
   }
   
   gradients
 }
 
-result.deriv = optim(rep(33, count - 1), Q, gr = Q.derivs, method = "BFGS")
+result.deriv = optim(seq(1, 29, length = 29), Q, gr = Q.derivs, method = "BFGS")
 result.deriv
 
 ranks = c(result$par, s - sum(result$par))
