@@ -102,19 +102,18 @@
 
     \item[3.] The answers are below:
     \begin{verbatim}> sign.matrix = function(x) outer(x, x, function(x1, x2) sign(x1 - x2))
->
+> 
 > conc = function(x, y) {
 +   conc.mtx = sign.matrix(x)
 +   conc.mty = sign.matrix(y)
 +   conc.z = conc.mtx + conc.mty
-+   c = length(which(conc.z < 0 | conc.z > 0))
++   c = length(which(conc.z != 0))
 +   n = length(x)
-+   c / (n * (n - 1))
++   c / (n * (n - 1)) 
 + }
->
+> 
 > conc(x = 1:5, y = c(3, 1, 4, 5, 2))
 [1] 0.6
->
 > set.seed(782)
 > x = round(rnorm(1000))
 > y = x + round(rnorm(1000))
@@ -136,23 +135,27 @@ zzdxzhangzhi/assignments/master/782/NBA2016-2017.csv",
 5 Atlanta Hawks Cleveland Cavaliers    3
 6 Atlanta Hawks    Dallas Mavericks    2
 > 
-> nba.names = nba.df$team1[seq(1, 870, length = 30)]
+> 
+> team.num = 30
+> nba.names = nba.df$team1[seq(1, length(nba.df$team1), length = team.num)]
 > nba.names
- [1] "Atlanta Hawks"          "Boston Celtics"         "Brooklyn Nets"
-          "Charlotte Hornets"     
- [5] "Chicago Bulls"          "Cleveland Cavaliers"    "Dallas Mavericks"
-       "Denver Nuggets"        
- [9] "Detroit Pistons"        "Golden State Warriors"  "Houston Rockets"
-        "Indiana Pacers"        
-[13] "Los Angeles Clippers"   "Los Angeles Lakers"     "Memphis Grizzlies"
-      "Miami Heat"            
-[17] "Milwaukee Bucks"        "Minnesota Timberwolves" "New Orleans Pelicans"
-   "New York Knicks"       
-[21] "Oklahoma City Thunder"  "Orlando Magic"          "Philadelphia 76ers"
-     "Phoenix Suns"          
-[25] "Portland Trail Blazers" "Sacramento Kings"       "San Antonio Spurs"
-      "Toronto Raptors"       
-[29] "Utah Jazz"              "Washington Wizards"    
+ [1] "Atlanta Hawks"          "Boston Celtics"         "Brooklyn Nets"         
+ [4] "Charlotte Hornets"      "Chicago Bulls"          "Cleveland Cavaliers"   
+ [7] "Dallas Mavericks"       "Denver Nuggets"         "Detroit Pistons"       
+[10] "Golden State Warriors"  "Houston Rockets"        "Indiana Pacers"        
+[13] "Los Angeles Clippers"   "Los Angeles Lakers"     "Memphis Grizzlies"     
+[16] "Miami Heat"             "Milwaukee Bucks"        "Minnesota Timberwolves"
+[19] "New Orleans Pelicans"   "New York Knicks"        "Oklahoma City Thunder" 
+[22] "Orlando Magic"          "Philadelphia 76ers"     "Phoenix Suns"          
+[25] "Portland Trail Blazers" "Sacramento Kings"       "San Antonio Spurs"     
+[28] "Toronto Raptors"        "Utah Jazz"              "Washington Wizards"    
+> 
+> # likelihood.r = function(r, times) {
+> #   mtx = outer(r, r, function(ri, rj) ri / (ri + rj))
+> #   rankv = c(mtx[which(row(mtx) != col(mtx))]) ^ times
+> #   log(prod(rankv))
+> # }
+> 
 > log.likelihood.r = function(r, times, s) {
 +   rn = s - sum(r)
 +   rr = c(r, rn)
@@ -171,18 +174,18 @@ zzdxzhangzhi/assignments/master/782/NBA2016-2017.csv",
 +   -log.likelihood.r(r, nba.df$wins, s)
 + }
 > 
-> count = length(nba.names)
-> result = optim(seq(1, 29, length = 29), Q, method = "BFGS", 
+> result = optim(seq(1, team.num - 1, length = team.num - 1), 
++                Q, method = "BFGS", 
 +                control = list(maxit = 200))
 > result
 $par
- [1]  28.920344  49.262769   8.487427  20.865839  26.562360  
-45.009903  18.735556  26.484090  21.994617
-[10] 127.851303  59.221865  27.412854  47.775175  12.710449  
-32.153364  26.968452  28.090105  17.226476
-[19]  19.848702  15.942769  38.873109  14.320608  13.473253  
-11.341333  28.116503  17.982849  83.968346
-[28]  43.789158  47.019261
+ [1]  28.920344  49.262769   8.487427  20.865839  26.562360  45.009903  
+18.735556  26.484090
+ [9]  21.994617 127.851303  59.221865  27.412854  47.775175  12.710449  
+32.153364  26.968452
+[17]  28.090105  17.226476  19.848702  15.942769  38.873109  14.320608  
+13.473253  11.341333
+[25]  28.116503  17.982849  83.968346  43.789158  47.019261
 
 $value
 [1] 761.4917
@@ -198,22 +201,22 @@ $message
 NULL
 
 > 
-> ratio = 100 / result$par[which.max(result$par)]
+> ratio = 100 / max(result$par)
 > r.value = result$par * ratio
 > rr.value = c (r.value, (s - sum(result$par)) * ratio)
 > rr.value
- [1]  22.620297  38.531300   6.638514  16.320396  20.775979  
-35.204884  14.654177  20.714760  17.203279
-[10] 100.000000  46.320893  21.441200  37.367766   9.941587  
-25.149031  21.093608  21.970918  13.473837
-[19]  15.524833  12.469774  30.404938  11.200987  10.538221   
-8.870722  21.991566  14.065441  65.676566
-[28]  34.250068  36.776521  30.966569
+ [1]  22.620297  38.531300   6.638514  16.320396  20.775979  35.204884  
+14.654177  20.714760
+ [9]  17.203279 100.000000  46.320893  21.441200  37.367766   9.941587  
+25.149031  21.093608
+[17]  21.970918  13.473837  15.524833  12.469774  30.404938  11.200987  
+10.538221   8.870722
+[25]  21.991566  14.065441  65.676566  34.250068  36.776521  30.966569
 > 
 > rank.table = data.frame(nba.names, rr.value, stringsAsFactors = FALSE)
 > ordered.rank = rank.table[order(rank.table$rr.value, decreasing = TRUE),]
 > colnames(ordered.rank) = c("name", "rank")
-> rownames(ordered.rank) = 1:30
+> rownames(ordered.rank) = 1:team.num
 > ordered.rank
                      name       rank
 1   Golden State Warriors 100.000000

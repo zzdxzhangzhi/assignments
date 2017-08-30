@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/W32TeX) (preloaded format=xelatex 2016.12.2)  30 AUG 2017 11:41
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/W32TeX) (preloaded format=xelatex 2016.12.2)  30 AUG 2017 13:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -260,7 +260,7 @@ Overfull \vbox (56.28644pt too high) has occurred while \output is active []
 [1
 
 ]
-Overfull \hbox (18.62639pt too wide) in paragraph at lines 122--122
+Overfull \hbox (18.62639pt too wide) in paragraph at lines 121--121
  []\OT1/cmtt/m/n/10.95 > sign.matrix = function(x) outer(x, x, function(x1, x2)
  sign(x1 - x2)) 
  []
@@ -270,45 +270,75 @@ Overfull \vbox (56.28644pt too high) has occurred while \output is active []
 
 
 [2]
-Overfull \hbox (36.96773pt too wide) in paragraph at lines 249--249
+Overfull \hbox (65.71117pt too wide) in paragraph at lines 252--252
+ []\OT1/cmtt/m/n/10.95 > nba.names = nba.df$team1[seq(1, length(nba.df$team1), 
+length = team.num)][] 
+ []
+
+
+Overfull \hbox (36.96773pt too wide) in paragraph at lines 252--252
  [] \OT1/cmtt/m/n/10.95 [1] "Atlanta Hawks"          "Boston Celtics"         "
 Brooklyn Nets"[] 
  []
 
 
-Overfull \hbox (54.21379pt too wide) in paragraph at lines 249--249
- [] \OT1/cmtt/m/n/10.95 [5] "Chicago Bulls"          "Cleveland Cavaliers"    "
-Dallas Mavericks"[] 
+Overfull \hbox (71.45985pt too wide) in paragraph at lines 252--252
+ [] \OT1/cmtt/m/n/10.95 [4] "Charlotte Hornets"      "Chicago Bulls"          "
+Cleveland Cavaliers"[] 
  []
 
 
-Overfull \hbox (48.4651pt too wide) in paragraph at lines 249--249
- [] \OT1/cmtt/m/n/10.95 [9] "Detroit Pistons"        "Golden State Warriors"  "
-Houston Rockets"[] 
+Overfull \hbox (48.4651pt too wide) in paragraph at lines 252--252
+ [] \OT1/cmtt/m/n/10.95 [7] "Dallas Mavericks"       "Denver Nuggets"         "
+Detroit Pistons"[] 
  []
 
 
-Overfull \hbox (59.96248pt too wide) in paragraph at lines 249--249
+Overfull \hbox (42.71642pt too wide) in paragraph at lines 252--252
+ []\OT1/cmtt/m/n/10.95 [10] "Golden State Warriors"  "Houston Rockets"        "
+Indiana Pacers"[] 
+ []
+
+
+Overfull \hbox (59.96248pt too wide) in paragraph at lines 252--252
  []\OT1/cmtt/m/n/10.95 [13] "Los Angeles Clippers"   "Los Angeles Lakers"     "
 Memphis Grizzlies"[] 
  []
 
 
-Overfull \hbox (77.20854pt too wide) in paragraph at lines 249--249
- []\OT1/cmtt/m/n/10.95 [17] "Milwaukee Bucks"        "Minnesota Timberwolves" "
-New Orleans Pelicans"[] 
+Overfull \hbox (88.70592pt too wide) in paragraph at lines 252--252
+ []\OT1/cmtt/m/n/10.95 [16] "Miami Heat"             "Milwaukee Bucks"        "
+Minnesota Timberwolves"[] 
  []
 
 
-Overfull \hbox (65.71117pt too wide) in paragraph at lines 249--249
- []\OT1/cmtt/m/n/10.95 [21] "Oklahoma City Thunder"  "Orlando Magic"          "
-Philadelphia 76ers"[] 
+Overfull \hbox (82.95723pt too wide) in paragraph at lines 252--252
+ []\OT1/cmtt/m/n/10.95 [19] "New Orleans Pelicans"   "New York Knicks"        "
+Oklahoma City Thunder"[] 
  []
 
 
-Overfull \hbox (59.96248pt too wide) in paragraph at lines 249--249
+Overfull \hbox (31.21904pt too wide) in paragraph at lines 252--252
+ []\OT1/cmtt/m/n/10.95 [22] "Orlando Magic"          "Philadelphia 76ers"     "
+Phoenix Suns"[] 
+ []
+
+
+Overfull \hbox (59.96248pt too wide) in paragraph at lines 252--252
  []\OT1/cmtt/m/n/10.95 [25] "Portland Trail Blazers" "Sacramento Kings"       "
 San Antonio Spurs"[] 
+ []
+
+
+Overfull \hbox (65.71117pt too wide) in paragraph at lines 252--252
+ []\OT1/cmtt/m/n/10.95 [28] "Toronto Raptors"        "Utah Jazz"              "
+Washington Wizards"[] 
+ []
+
+
+Overfull \hbox (36.96773pt too wide) in paragraph at lines 252--252
+ [] \OT1/cmtt/m/n/10.95 [1]  28.920344  49.262769   8.487427  20.865839  26.562
+360  45.009903[] 
  []
 
 
@@ -316,13 +346,49 @@ Overfull \vbox (56.28644pt too high) has occurred while \output is active []
 
 
 [3]
-Overfull \hbox (48.4651pt too wide) in paragraph at lines 249--249
+Overfull \hbox (36.96773pt too wide) in paragraph at lines 252--252
+ [] \OT1/cmtt/m/n/10.95 [9]  21.994617 127.851303  59.221865  27.412854  47.775
+175  12.710449[] 
+ []
+
+
+Overfull \hbox (36.96773pt too wide) in paragraph at lines 252--252
+ []\OT1/cmtt/m/n/10.95 [17]  28.090105  17.226476  19.848702  15.942769  38.873
+109  14.320608[] 
+ []
+
+
+Overfull \hbox (36.96773pt too wide) in paragraph at lines 252--252
+ [] \OT1/cmtt/m/n/10.95 [1]  22.620297  38.531300   6.638514  16.320396  20.775
+979  35.204884[] 
+ []
+
+
+Overfull \hbox (36.96773pt too wide) in paragraph at lines 252--252
+ [] \OT1/cmtt/m/n/10.95 [9]  17.203279 100.000000  46.320893  21.441200  37.367
+766   9.941587[] 
+ []
+
+
+Overfull \hbox (36.96773pt too wide) in paragraph at lines 252--252
+ []\OT1/cmtt/m/n/10.95 [17]  21.970918  13.473837  15.524833  12.469774  30.404
+938  11.200987[] 
+ []
+
+
+Overfull \hbox (36.96773pt too wide) in paragraph at lines 252--252
+ []\OT1/cmtt/m/n/10.95 [25]  21.991566  14.065441  65.676566  34.250068  36.776
+521  30.966569[] 
+ []
+
+
+Overfull \hbox (48.4651pt too wide) in paragraph at lines 252--252
  []\OT1/cmtt/m/n/10.95 > rank.table = data.frame(nba.names, rr.value, stringsAs
 Factors = FALSE)[] 
  []
 
 
-Overfull \hbox (65.71117pt too wide) in paragraph at lines 249--249
+Overfull \hbox (65.71117pt too wide) in paragraph at lines 252--252
  []\OT1/cmtt/m/n/10.95 > ordered.rank = rank.table[order(rank.table$rr.value, d
 ecreasing = TRUE),][] 
  []
@@ -332,27 +398,21 @@ Overfull \vbox (56.28644pt too high) has occurred while \output is active []
 
 
 [4]
-Overfull \hbox (31.21904pt too wide) in paragraph at lines 298--298
+Overfull \hbox (31.21904pt too wide) in paragraph at lines 302--302
  []\OT1/cmtt/m/n/10.95 +     mtx1 = outer(r[i], r[-i], function(ri, rj) rj / ri
  * (ri + rj))[] 
  []
 
 
-Overfull \hbox (88.70592pt too wide) in paragraph at lines 298--298
- []\OT1/cmtt/m/n/10.95 +     deriv1 = c(t(mtx1), 1 / r[i]) * times1[(rlen * (i 
-- 1) + 1) : (rlen * i)][] 
+Overfull \hbox (36.96773pt too wide) in paragraph at lines 302--302
+ []\OT1/cmtt/m/n/10.95 +                1 / r[i]) * times1[(rlen * (i - 1) + 1)
+ : (rlen * i)][] 
  []
 
 
-Overfull \hbox (134.69542pt too wide) in paragraph at lines 298--298
- []\OT1/cmtt/m/n/10.95 +     deriv2 = c(t(mtx2), 1 / (s - sum(r))) * times2[(rl
-en * (i - 1) + 1) : (rlen * i)][] 
- []
-
-
-Overfull \hbox (59.96248pt too wide) in paragraph at lines 298--298
- []\OT1/cmtt/m/n/10.95 +     gradients[i] = log.likelihood.r.deriv(r, i, nba.df
-$wins, wins.team2)[] 
+Overfull \hbox (82.95723pt too wide) in paragraph at lines 302--302
+ []\OT1/cmtt/m/n/10.95 +                1 / (s - sum(r))) * times2[(rlen * (i -
+ 1) + 1) : (rlen * i)][] 
  []
 
 
@@ -360,19 +420,19 @@ Overfull \vbox (56.28644pt too high) has occurred while \output is active []
 
 
 [5]
-Overfull \hbox (8.22429pt too wide) in paragraph at lines 298--298
+Overfull \hbox (59.96248pt too wide) in paragraph at lines 302--302
+ []\OT1/cmtt/m/n/10.95 +     gradients[i] = log.likelihood.r.deriv(r, i, nba.df
+$wins, wins.team2)[] 
+ []
+
+
+Overfull \hbox (8.22429pt too wide) in paragraph at lines 302--302
  []\OT1/cmtt/m/n/10.95 > result.deriv = optim(seq(1, 29, length = 29), Q, gr = 
 Q.derivs,[] 
  []
 
 
-Overfull \hbox (2.4756pt too wide) in paragraph at lines 298--298
- [] \OT1/cmtt/m/n/10.95 [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 
-18 19 20[] 
- []
-
-
-Overfull \hbox (42.71642pt too wide) in paragraph at lines 328--328
+Overfull \hbox (42.71642pt too wide) in paragraph at lines 332--332
  []\OT1/cmtt/m/n/10.95 +     ans[i] = -log.likelihood.r(ranks[-length(ranks)], 
 nba.df$wins, s)[] 
  []
@@ -384,7 +444,7 @@ Overfull \vbox (56.28644pt too high) has occurred while \output is active []
 [6]
 File: a2_contour.eps Graphic file (type eps)
  <a2_contour.eps>
-Overfull \hbox (51.46509pt too wide) in paragraph at lines 329--330
+Overfull \hbox (51.46509pt too wide) in paragraph at lines 333--334
 [][] 
  []
 
@@ -395,7 +455,7 @@ Overfull \vbox (56.28644pt too high) has occurred while \output is active []
 [7]
 File: a2_profile.eps Graphic file (type eps)
  <a2_profile.eps>
-Overfull \hbox (51.46509pt too wide) in paragraph at lines 345--346
+Overfull \hbox (51.46509pt too wide) in paragraph at lines 349--350
 [] 
  []
 

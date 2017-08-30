@@ -54,7 +54,7 @@ conc = function(x, y) {
   conc.mtx = sign.matrix(x)
   conc.mty = sign.matrix(y)
   conc.z = conc.mtx + conc.mty
-  c = length(which(conc.z < 0 | conc.z > 0))
+  c = length(which(conc.z != 0))
   n = length(x)
   c / (n * (n - 1)) 
 }
@@ -71,7 +71,9 @@ stringsAsFactors = FALSE)
 names(nba.df) = c("team1", "team2", "wins")
 head(nba.df)
 
-nba.names = nba.df$team1[seq(1, 870, length = 30)]
+
+team.num = 30
+nba.names = nba.df$team1[seq(1, length(nba.df$team1), length = team.num)]
 nba.names
 
 # likelihood.r = function(r, times) {
@@ -98,12 +100,12 @@ Q = function(r) {
   -log.likelihood.r(r, nba.df$wins, s)
 }
 
-count = length(nba.names)
-result = optim(seq(1, 29, length = 29), Q, method = "BFGS", 
+result = optim(seq(1, team.num - 1, length = team.num - 1), 
+               Q, method = "BFGS", 
                control = list(maxit = 200))
 result
 
-ratio = 100 / result$par[which.max(result$par)]
+ratio = 100 / max(result$par)
 r.value = result$par * ratio
 rr.value = c (r.value, (s - sum(result$par)) * ratio)
 rr.value
@@ -111,7 +113,7 @@ rr.value
 rank.table = data.frame(nba.names, rr.value, stringsAsFactors = FALSE)
 ordered.rank = rank.table[order(rank.table$rr.value, decreasing = TRUE),]
 colnames(ordered.rank) = c("name", "rank")
-rownames(ordered.rank) = 1:30
+rownames(ordered.rank) = 1:team.num
 ordered.rank
 
 log.likelihood.r.deriv = function(r, i, times1, times2) {
@@ -149,16 +151,9 @@ result.deriv
 
 ranks = c(result$par, s - sum(result$par))
 ranks.sort = sort(ranks, decreasing = TRUE)
-#ranks
-#ranks.sort
 first2 = c(which(round(ranks) == round(ranks.sort[1])), 
            which(round(ranks) == round(ranks.sort[2])))
 first2
-
-#fixed.val = ranks.sort[c(-1, -2)]
-#fixed.val
-#fixed.val = ranks[-first2]
-#fixed.val
 
 Q2 = function(r1, r2) {
   m = max(length(r1), length(r2))
@@ -170,7 +165,8 @@ Q2 = function(r1, r2) {
   ans = numeric(m)
   for (i in 1:m) {
     ranks[first2] = c(r1[i], r2[i])
-    ans[i] = -log.likelihood.r(ranks[-length(ranks)], nba.df$wins, s)
+    ans[i] = -log.likelihood.r(ranks[-length(ranks)], 
+                               nba.df$wins, s)
   }
   
   ans
