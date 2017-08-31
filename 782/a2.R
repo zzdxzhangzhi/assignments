@@ -116,37 +116,42 @@ colnames(ordered.rank) = c("name", "rank")
 rownames(ordered.rank) = 1:team.num
 ordered.rank
 
-log.likelihood.r.deriv = function(r, i, times1, times2) {
+log.likelihood.r.deriv = function(r, times1, times2, s = 1000) {
   rlen = length(r)
+  rr = c(r, s - sum(r))
   
-  if (all(r > 0)) {
-    mtx1 = outer(r[i], r[-i], function(ri, rj) rj / ri * (ri + rj))
-    mtx2 = outer(r[i], r[-i], function(ri, rj) 1 / (ri + rj))
-    deriv1 = c(t(mtx1), 
-               1 / r[i]) * times1[(rlen * (i - 1) + 1) : (rlen * i)]
-    deriv2 = c(t(mtx2), 
-               1 / (s - sum(r))) * times2[(rlen * (i - 1) + 1) : (rlen * i)]
-    
-    sum(deriv1) - sum(deriv2)
-  } else {
-    -Inf
-  }
+  mtx1 = outer(rr, rr, function(ri, rj) rj / ri * (ri + rj))
+  mtx2 = outer(rr, rr, function(ri, rj) 1 / (ri + rj))
+  #deriv1 = c(t(mtx1),
+  #           1 / r[i]) * times1[(rlen * (i - 1) + 1):(rlen * i)]
+  deriv1 = c(t(mtx1)[which(row(mtx1) != col(mtx1))]) * times1
+  dim(deriv1) = c(rlen + 1, rlen)
+  #deriv2 = c(t(mtx2),
+  #           1 / (s - sum(r))) * times2[(rlen * (i - 1) + 1):(rlen * i)]
+  deriv2 = c(t(mtx2)[which(row(mtx2) != col(mtx2))]) * times2
+  dim(deriv2) = c(rlen + 1, rlen)
+  
+  gradients = rowSums(deriv1[-(rlen + 1), ]) - sum(deriv1[rlen + 1, ]) - 
+    rowSums(deriv2[-(rlen + 1), ]) + sum(deriv2[rlen + 1, ])
+  print(gradients)
+  gradients
 }
 
 Q.derivs = function(r) {
   order.team2 = order(nba.df$team2)
   wins.team2 = nba.df$wins[order.team2]
-  rlen = length(r)
-  gradients = numeric(rlen)
-  for (i in 1:rlen) {
-    gradients[i] = log.likelihood.r.deriv(r, i, nba.df$wins, wins.team2)
-  }
-  
-  gradients
+  #rlen = length(r)
+  #gradients = numeric(rlen)
+  #for (i in 1:rlen) {
+  #  gradients[i] = log.likelihood.r.deriv(r, i, nba.df$wins, wins.team2)
+  #}
+  log.likelihood.r.deriv(r, nba.df$wins, wins.team2)
+  #gradients
 }
 
-result.deriv = optim(seq(1, 29, length = 29), Q, gr = Q.derivs, 
-                     method = "BFGS")
+result.deriv = optim(seq(1, 29, length = 29), Q, Q.derivs,
+                     method = "BFGS",
+                     control = list(reltol = 1e-10))
 result.deriv
 
 ranks = c(result$par, s - sum(result$par))
@@ -172,12 +177,16 @@ Q2 = function(r1, r2) {
   ans
 }
 
-r1 = seq(40, 145, length = 61)
-r2 = seq(20, 100, length = 61)
+r1 = ranks[first2[1]] + seq(-10, 10, length = 101)
+r2 = ranks[first2[2]] + seq(-10, 10, length = 101)
 z = outer(r1, r2, Q2)
 contour(r1, r2, z,
         xlab = paste("rank of", nba.names[first2[1]]),
-        ylab = paste("rank of", nba.names[first2[2]]))
+        ylab = paste("rank of", nba.names[first2[2]]),
+        levels = result$value + 2^(1:10) / 1000, 
+        main = "Profile Log-likelihood")
+points(ranks[first2[1]],ranks[first2[2]], col = "blue", pch = 1, cex = 1.5)
+points(ranks[first2[1]],ranks[first2[2]], col = "red", pch = 19)
 
 r1 = seq(40, 145, length = 1001)
 r2 = seq(20, 100, length = 6)
