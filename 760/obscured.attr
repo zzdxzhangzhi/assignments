@@ -1,0 +1,22 @@
+contam_code: a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x.
+animal_products: y,z.
+agricultural_compounds: y,z.
+car_parts: y,z.
+fertiliser: y,z.
+non_risk_goods: z.
+nursery_stock: y,z.
+plant_products: y,z.
+produce: y,z.
+seed_grain: y,z.
+stored_products: y,z.
+tyres: y,z.
+vehicles: y,z.
+equipment: y,z.
+clean: y,z.
+Pack_Mat: y,z.
+Pack_Wood: y,z.
+Wood_Treat: y,z.
+Cert_Avail: y,z.
+full_name: aa_ab,ac_ad,ae,af_ag,ah,ai_aj_ak,al,am,an_ao,ap_aq,ar,as,at,au_av,aw_ax,ay_az_ba,bb,bc,bd_ag,be,bf,bg,bh_bi,bj,bk,bl,bm,bn_bo,bn_bp,bq_br_bs,bt__bu_ba,bv,bw,bx_by,bz_ca,cb,cc_cd_ce,cf,cg_ch,ci_cj,ck,cl,cm_cn,co,cp,ac_cq,cr_cs_ct_cu,cv,cw_cx_cy_cz,da_db,dc,dd,de,df,dg_dh,di,dj,dk_dl,dm_dn,do_cz,dp_dq,dr_ds_dt,du_dv_dw_ao,dx,dy,dz_ea,eb,ec_ec,ed_ed,ee_ef_eg,eh,ei_ej_ek_el_ad,em,en,eo,ep,eq,er,es,et,eu,ev,ew_ex,ey,ez,fa,fb,fc,bn_fd_bn_fe,ff_ff,fg_ec,fh_fi,fj_bn,fk,fl,fm,fn_fo,fp,fq_dt,fr,fs,ft,fu,fv,fw,fx_fy,fz,ga,gb,gc,gd,ge,gf,gg,gh,gi,gj_dw,gk,gl,gm,gn,go_gp,gq_gr,gs,du,gt,gu_gv,gw_dq,gx,gy,gz_ha,hb_hc,hd_he,hf,hg,hh,ci_hi,hj_hk,hl,hm,hn,bn_ho,hp_hq,hr_hs,ht_dw_ba,hu,hv_hw,hx,hy,hz_gp,ia_ib,ic_id,ie,hv_if_ig_ih,ii,ij_ik,il,im_in,io_ip_iq,ir_is_it_iu,iv,iw,ix,iy,iz,ja,jb_jc,jd_je,jf,jg,bp_ct_jh,ji_jj_jk_ea,jl,jm,fh_jn_jo_ba,jp_jq_jr,jp_js,jt,ju_jv,jw,dm,jx_jy,jz_ka_kb,kc_kd_ke,kf,kg,kh_cx_ki_kj,kk_it_kl,km,kn_kn,ko,kp_kq_kr,ks,kt,ku_kv,kw,kx,ky_kz,la_lb_lc,ld,le_eg,lf_lg,lh,li_dw,lj_lk,ll,lm_ln,lo_lp,lq,lr_ls,lt,lu,lv,lw,lx_ly,lz,ma_mb_mc,bn_md,hv_hw_by,me,mf,mg,mh,mi,mj_mk,ac_ml,mm,fh_ke,mn,mo,mp,aw_mq_mr,ms_id,mt_ec,mu,mv,gw_dn,mw,mx,my,mz,ee_eg,na,nb,nc,nd_ea,ne_cx_nf,ng,nh,ni,nj_cx_nk_nl,nm,nn,kh,hu_hs,no,np,jr_nq,nr,ns_nt,nu,ml,nv,nw_nx_dt,ny_ba,nz,oa_ke,ob_ob,oc_od_by,ha,oe,of_ea_og,oh,oi_oj,ok,ci_ol_eg,om_on_oo_op,oq_mj_or,os,ot,bn_ou,ov_ow_ox_ba_by,oy,oz,pa,ma,pb,pc,pd,pe,pf,pg,ph_pi_kp_kq,pj_ba,io_pk,pl,pm,pn,fx_po,pp_pq_pr,ps,bn_pt,bn_pu,le,pv,pw,io_px_py,pz_ba_qa,qb,qc,qd_qe,qf_dn,qg,qh,qi,qj_ac_qj,qk_ql,qm,qn,qo,qp,qq,qr,jh,bn_qs,qt,qu,qv,qw,qx,qy_qz,ra,rb_jy,rc,rd,re_re,rf,rg,rh_ri,rj_lr,rk,ir_qs_rl,rm,rn_gv,kc_kd_mr,ro_rp,rq_rr,rs,rt_ru,rv,rw,rx,ry,rz,nw_dt,sa,sb,pj,sc_sd,se,sf,sg,sh,si,sj_sk,sl,sm,sn,so,sp_sq,sr_in,ss_jc,st_su_sv,sw_sx,sy_eg,hp_sz,ta_tb,tc_td_te,tf,tg,th,hv_cs_mr,ti,tj_tk,tl_ea,tm,tn_to_tp,tq_tr,ts,tt_az_tu_pr,tv,tw,tx_dq,ty_tz_ua,ub,uc,ud,ue,uf__ug_uh,ui_uj_uk,ul,um,un,uo,up_uq,ur_us,ut,uu,ia_uv,uw,ux_jv,ee_mr,uy,uz,va,vb_vc,ac_vd_av,ve,vf,vg,vh,vi,oy_ba,vj,vk_vl_ag,vm,bx_rl,vn,vo_vp_vq_lk,vr,vs,vt,vu,vv,vw_vx,vy_lr,vz,qf_wa,wb,bg_kv,wc,wd_we_wf,wg,wh,wi,wj,wk,ci_wl_qa,wm,ac_ad_ef_wn,wo,wp_wq_og,wr_pr,ws,hv_hw_wt,wu,wv,ww,wx_el_ad_kv,wy,wz_xa_ea_xb,xc_ln,xd,cl_xe_xf,xg,oq_wl,xh_xi,xh_xj,ac_xk_ri,xl,xm,xn,xo,xp_mr,xq,xr,xs_tp,xt,xu,xv,xw_lf_xx,xy_gp,xz,ya,yb,qk_yc,yd,ye_yf,yg_mr,fd,yh,yi_yj,yk,yl_ym,yn,io_xx,ac_ad_dn,yo,ci_yp,yq,yr,ys_wa,ee_kv,yt_wm,yu,yv_dt,yw_id,yx,du_dn.
+
+country_name: yy,yz,za_zb_zc_zd,ze,zf_zg,zh,zi,zj,zk_zl,zm,zn__zo,zp,zq,zr,zs,zt,zu,zv,zw,zx_zg,zy_zi,zz,aaa,aab,aac,aad,aae,aaf_aag_aah,zb_aai,aaj,aak,aal,aam,aag_aan,aao,aap,aaq,aar,aas,aat_aau,aav_aaw,zo_aax,aay,aaz,aba,abb,abc,abd,abe,abf,abg,abh,abi,abj_abk_abl,abm,abn,abo,abp,abq,abr_abs_abt_zg,abu_abv,abw,abx,aby,abz,aca,acb_zc_acc,acd_ace_acc_acf,acg,ach,aci_acj_acc_acf,ack_acl,acm,acn,aco_acp,acq_acr,acs,act,acu,acv_acw,acx,acy,acz,ada,adb,adc,add,ade,adf,adg.
